@@ -1,15 +1,14 @@
 'use client'
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowDown, ArrowRight, FileDown } from 'lucide-react'
+import { ArrowDown, ArrowRight } from 'lucide-react'
 import type { Dictionary } from '@/app/[lang]/dictionaries'
-import { CV_HREF } from '../Nav'
 import { Words } from '../motion/Scroll'
 import { REST, useStill } from '../motion/useStill'
 import { Figure } from './cover/Figure'
 
 // The opening: a quiet hero on four parallax depths. On the way out the name splits and lags, Ruben rises fastest,
-// the katakana sinks and the speed lines widen. Then the headline inks in word by word.
+// and the speed lines widen. Then the headline inks in word by word.
 export function Cover({ dict }: { dict: Dictionary }) {
   const t = dict.cover
   const [first, ...rest] = t.name.split(' ')
@@ -20,7 +19,6 @@ export function Cover({ dict }: { dict: Dictionary }) {
   const leftX = useTransform(p, [0, 1], ['0%', '-24%'])
   const rightX = useTransform(p, [0, 1], ['0%', '24%'])
   const fade = useTransform(p, [0, 0.7], [1, 0])
-  const jpY = useTransform(p, [0, 1], [0, 280])
 
   return (
     <div className="relative isolate">
@@ -51,23 +49,10 @@ export function Cover({ dict }: { dict: Dictionary }) {
                 {t.ctaWork}
                 <ArrowRight aria-hidden className="size-4" />
               </a>
-              <a href={CV_HREF} download className="inline-flex min-h-11 items-center gap-2 px-2 text-sm font-medium underline underline-offset-4 hover:text-red-text">
-                <FileDown aria-hidden className="size-4" />
-                {t.ctaCv}
-              </a>
             </div>
           </motion.div>
 
           <Figure p={p} still={still} alt={t.photoAlt} />
-
-          {/* His name in katakana, set vertically like an anime title card. */}
-          <motion.p
-            aria-hidden
-            style={still ? REST : { y: jpY, opacity: fade }}
-            className="jp absolute -right-12 top-0 hidden text-xs text-muted xl:block"
-          >
-            ルーベン・コスタ
-          </motion.p>
         </div>
 
         <div className="flex items-end justify-between">
