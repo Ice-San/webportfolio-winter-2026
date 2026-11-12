@@ -6,7 +6,7 @@ import { InOut } from '../motion/Scroll'
 import { Placeholder } from '../Placeholder'
 import { shots } from '@/content/images'
 
-// EP.01: Minecraft at 12–15. The screenshot drifts behind its frame, the blocks stack one per scroll step,
+// EP.01: Minecraft at 12–15. The screenshot rides its panel, the blocks stack one per scroll step,
 // and the episode ends on Attempt #01 (Return by Death: every retry starts from zero).
 export function StartingFromZero({ dict }: { dict: Dictionary }) {
   const t = dict.ch01
@@ -32,7 +32,7 @@ export function StartingFromZero({ dict }: { dict: Dictionary }) {
 
         <div className="grid content-start gap-8 lg:col-span-6">
           <Panel>
-            <Placeholder description={t.image} label={dict.common.image} src={shots.minecraft} ratio="16/10" drift />
+            <Placeholder description={t.image} label={dict.common.image} src={shots.minecraft} />
           </Panel>
           <Panel from={{ x: 40, y: 80 }} frameClassName="grid place-items-center p-6">
             <BlockBuild className="w-full max-w-xs" />

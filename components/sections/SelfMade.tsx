@@ -37,7 +37,7 @@ export function SelfMade({ dict }: { dict: Dictionary }) {
 
         <aside className="grid content-start gap-6 lg:sticky lg:top-24 lg:self-start">
           <Panel frameClassName="overflow-hidden rounded-2xl">
-            <Placeholder description={t.image} label={dict.common.image} src={projectShots.pathpals.gallery[0]} position="object-top" ratio="3/2" drift />
+            <Placeholder description={t.image} label={dict.common.image} src={projectShots.pathpals.gallery[0]} />
           </Panel>
         </aside>
       </div>

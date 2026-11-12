@@ -67,7 +67,7 @@ export function TheServer({ dict }: { dict: Dictionary }) {
                 {t.beats[2]}
               </span>
             </div>
-            <Placeholder description={t.imageSite} label={dict.common.image} src={shots.anicoldsSite} position="object-top" ratio="16/5" />
+            <Placeholder description={t.imageSite} label={dict.common.image} src={shots.anicoldsSite} />
           </Panel>
         </div>
       </div>

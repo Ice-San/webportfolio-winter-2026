@@ -25,7 +25,7 @@ export function OffPanel({ dict }: { dict: Dictionary }) {
       </div>
       <Parallax speed={0.18}>
         <Panel from={{ x: 40 }} frameClassName="overflow-hidden rounded-2xl">
-          <Placeholder description={t.image} label={dict.common.image} src={shots.cafe} position="object-[50%_35%]" sizes="(min-width: 1024px) 32rem, 100vw" ratio="4/5" drift />
+          <Placeholder description={t.image} label={dict.common.image} src={shots.cafe} sizes="(min-width: 1024px) 32rem, 100vw" />
         </Panel>
       </Parallax>
     </div>
