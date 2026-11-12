@@ -4,12 +4,11 @@ import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { shots } from '@/content/images'
 import { REST, useStill } from '../motion/useStill'
+import { ByteSvg } from '../eggs/drone/ByteSvg'
 
-const LINE = '#ECEAE3'
-const DARK = '#0F1322'
-
-// The last scene: Ruben's real desk at night, with the AI companion floating in the dark beside the monitor.
-// Three depths: the photo drifts slowly, the companion rises faster, its glow pulses on its own.
+// The last scene: Ruben's real desk at night, with Byte (the same drone that flies the page) hovering beside him.
+// Three depths: the photo drifts slowly, Byte rises faster, its glow pulses on its own. id="byte-home" tells the
+// flying Byte to step out while this one is on screen, so there are never two.
 export function PhotoScene({ label }: { label: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const still = useStill()
@@ -32,19 +31,10 @@ export function PhotoScene({ label }: { label: string }) {
       {/* Night grade: the left falls off into the dark the companion floats in. */}
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgb(15_19_34/0.92)_0%,rgb(15_19_34/0.35)_45%,rgb(15_19_34/0.15)_100%)]" />
 
-      <motion.div aria-hidden style={still ? REST : { y: botY }} className="absolute left-[8%] top-[22%] w-[22%] max-w-44 sm:left-[14%]">
-        <div className={still ? '' : 'motion-safe:animate-[float_4s_ease-in-out_infinite]'}>
-          <svg viewBox="0 0 120 120" className="h-auto w-full overflow-visible" fill="none" strokeLinecap="round">
-            <circle cx="60" cy="66" r="54" fill="#8DD2FF" opacity="0.14" className="motion-safe:animate-pulse" />
-            <path d="M60 34 v-14" stroke={LINE} strokeWidth="2.5" />
-            <circle cx="60" cy="16" r="5" fill="#E0241B" />
-            <rect x="22" y="34" width="76" height="60" rx="22" fill={DARK} stroke={LINE} strokeWidth="2.5" />
-            <g style={{ transformOrigin: '60px 64px', animation: still ? undefined : 'blink 4s steps(1) infinite' }}>
-              <ellipse cx="47" cy="64" rx="5.5" ry="8" fill="#8DD2FF" />
-              <ellipse cx="73" cy="64" rx="5.5" ry="8" fill="#8DD2FF" />
-            </g>
-            <path d="M40 104 Q60 112 80 104" stroke="#8DD2FF" strokeOpacity="0.5" strokeWidth="2" />
-          </svg>
+      <motion.div id="byte-home" aria-hidden style={still ? REST : { y: botY }} className="absolute left-[8%] top-[24%] w-[18%] max-w-36 sm:left-[14%]">
+        <div className="absolute inset-[-35%] rounded-full bg-[radial-gradient(closest-side,rgb(246_245_241/0.22),transparent)] motion-safe:animate-pulse" />
+        <div className={still ? 'relative' : 'relative motion-safe:animate-[float_4s_ease-in-out_infinite]'}>
+          <ByteSvg still={still} tingle={false} ink="#ECEAE3" />
         </div>
       </motion.div>
     </div>

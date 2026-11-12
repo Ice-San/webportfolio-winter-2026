@@ -1,12 +1,13 @@
 import type { Dictionary } from '@/app/[lang]/dictionaries'
 import { Panel } from '../../comic/Panel'
+import { ByteSvg } from '../../eggs/drone/ByteSvg'
 
+// Byte's face: the same drone as everywhere else, small and still.
 function AiAvatar() {
   return (
-    <span aria-hidden className="grid size-9 shrink-0 place-items-center rounded-full bg-night">
-      <span className="flex gap-1">
-        <span className="h-2.5 w-1.5 rounded-full bg-glow" />
-        <span className="h-2.5 w-1.5 rounded-full bg-glow" />
+    <span aria-hidden className="grid size-10 shrink-0 place-items-center rounded-full border border-line bg-paper">
+      <span className="block w-8">
+        <ByteSvg still tingle={false} />
       </span>
     </span>
   )
