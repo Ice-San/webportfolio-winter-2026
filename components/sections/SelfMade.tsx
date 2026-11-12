@@ -14,7 +14,7 @@ export function SelfMade({ dict }: { dict: Dictionary }) {
 
   return (
     <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-8 sm:px-6">
-      <Episode n="03" jp="第三話" slate={t.slate} title={t.title} nod={t.nod} />
+      <Episode n="03" slate={t.slate} title={t.title} nod={t.nod} />
 
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
         <div className="grid content-start gap-10">
@@ -37,7 +37,7 @@ export function SelfMade({ dict }: { dict: Dictionary }) {
 
         <aside className="grid content-start gap-6 lg:sticky lg:top-24 lg:self-start">
           <Panel frameClassName="overflow-hidden rounded-2xl">
-            <Placeholder description={t.image} label={dict.common.image} src={projectShots.pathpals.cover} position="object-top" ratio="3/2" drift />
+            <Placeholder description={t.image} label={dict.common.image} src={projectShots.pathpals.gallery[0]} position="object-top" ratio="3/2" drift />
           </Panel>
         </aside>
       </div>
