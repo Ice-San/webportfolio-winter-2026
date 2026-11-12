@@ -40,7 +40,7 @@ pnpm build   # production build
 | Shared CSS classes (`kicker`, `title`, `btn`, `chip`…) | `app/styles/typography.css`, `app/styles/controls.css` |
 | Animations (keyframes, reduced motion) | `app/styles/motion.css` |
 | Page width and section spacing | `app/styles/layout.css`: `.column` (width + side padding), `.section-y` (added by `Scene` unless `flush`) |
-| Favicon and the nav mark | `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`, `components/Monogram.tsx` |
+| Favicon and the nav mark (Byte) | `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`; the nav uses `components/eggs/drone/ByteSvg.tsx` |
 | Where Byte flies or docks | `components/eggs/drone/useLane.ts` |
 | SEO: titles, share image, sitemap, robots, llms.txt | `app/[lang]/layout.tsx`, `opengraph-image.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/llms.txt/` |
 | Language detection / redirect | `proxy.ts` + `lib/i18n.ts` |

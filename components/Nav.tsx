@@ -5,7 +5,7 @@ import type { Locale } from '@/lib/i18n'
 import { AutoHide } from './AutoHide'
 import { LangSwitch } from './LangSwitch'
 import { MenuPanel } from './MenuPanel'
-import { Monogram } from './Monogram'
+import { ByteSvg } from './eggs/drone/ByteSvg'
 import { WebToggle } from './eggs/WebShooter'
 
 // ponytail: one CV for both languages until public/cv-pt.pdf exists; then switch to `/cv-${lang}.pdf`.
@@ -40,7 +40,10 @@ export function Nav({ dict, lang }: { dict: Dictionary; lang: Locale }) {
       </a>
       <nav aria-label={t.menu} className="column flex h-14 items-center gap-2 sm:gap-3">
         <Link href={`/${lang}`} aria-label={t.home} className="flex items-center gap-2.5">
-          <Monogram />
+          {/* Byte is the site mark here and in the favicon (app/favicon.ico, icon.png, apple-icon.png). */}
+          <span aria-hidden className="block w-10 shrink-0">
+            <ByteSvg still tingle={false} />
+          </span>
           <span className="hidden font-semibold tracking-tight sm:inline">Ruben Costa</span>
         </Link>
         <ul className="ml-auto hidden items-center gap-6 text-sm lg:flex">{items}</ul>
