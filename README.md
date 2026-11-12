@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ruben Costa · Portfolio (v3)
 
-## Getting Started
+A bilingual (English / Portuguese) portfolio told as a short anime-style series. Next.js 16 (App Router),
+React 19, Tailwind CSS 4, framer-motion. Deployed on Vercel.
 
-First, run the development server:
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev     # local site at http://localhost:3000 (redirects to /en or /pt)
+pnpm test    # content, dictionary and i18n tests (node --test)
+pnpm lint    # ESLint, including the 100-line rule below
+pnpm build   # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## House rules
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **No file over 100 lines.** `pnpm lint` fails if a code file grows past it.
+- **When a file gets too big, split it into a same-name folder next to it.** The original file keeps its path and
+  exports, so nothing that imports it changes. Examples: `content/projects.ts` + `content/projects/`,
+  `components/eggs/Drone.tsx` + `components/eggs/drone/`.
+- All visible text lives in `dictionaries/` or `content/`, never hard-coded in components. Every string has an
+  `en` and a `pt` version (the tests check this).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where to change what
 
-## Learn More
+| I want to change… | Go to |
+|---|---|
+| Any page text (headlines, story, buttons, nav, 404, the drone's lines) | `dictionaries/en/*.json` **and** `dictionaries/pt/*.json`, same key in both |
+| A project's text, links, status or tech list | `content/projects/<slug>.ts` |
+| Project order, or adding a project | `content/projects.ts` (+ `Slug` in `content/projects/types.ts`) |
+| Skills on the skill tree | `content/skills.ts` |
+| Which image a section or project shows | `content/images.ts` (files are in `public/`) |
+| Name, email, GitHub, LinkedIn, site URL | `lib/site.ts` |
+| The CV file | `public/cv-en.pdf` (linked from `components/Nav.tsx` → `CV_HREF`) |
+| Colours and fonts | `app/styles/tokens.css` |
+| Shared CSS classes (`kicker`, `title`, `btn`, `chip`…) | `app/styles/typography.css`, `app/styles/controls.css` |
+| Animations (keyframes, reduced motion) | `app/styles/motion.css` |
+| SEO: titles, share image, sitemap, robots, llms.txt | `app/[lang]/layout.tsx`, `opengraph-image.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/llms.txt/` |
+| Language detection / redirect | `proxy.ts` + `lib/i18n.ts` |
 
-To learn more about Next.js, take a look at the following resources:
+### Dictionary files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| File | Keys |
+|---|---|
+| `site.json` | `meta` (SEO), `common`, `nav`, `hud`, `notFound`, `drone` |
+| `opening.json` | `cover`, `ch01`, `save`, `swing` |
+| `chapters.json` | `ch02`, `ch03` |
+| `work.json` | `work`, `case`, `skills` |
+| `ending.json` | `offscreen`, `ch04`, `credits` |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## The home page, top to bottom
 
-## Deploy on Vercel
+`app/[lang]/page.tsx` stacks these sections (`components/sections/`):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| `id` | Section | Component |
+|---|---|---|
+| `top` | Cover (name, photo, CTAs) | `Cover.tsx` (+ `cover/Figure.tsx`) |
+| `ch01` | EP.01 Minecraft | `StartingFromZero.tsx` |
+| `ch02` | EP.02 Animes Cold (Discord, bots) | `TheServer.tsx` |
+| `ch03` | EP.03 Self-made (commit log) | `SelfMade.tsx` |
+| `work` | The four projects (sideways shelf) | `CollectedIssues.tsx` (+ `collected-issues/IssueCard.tsx`) |
+| `skills` | Skill tree | `Abilities.tsx` |
+| `offscreen` | Side quests | `OffPanel.tsx` |
+| `ch04` / `credits` | EP.04, AI chat, contact | `BrandNewDay.tsx` (+ `brand-new-day/Chat.tsx`, `Credits.tsx`) |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Each case study is `app/[lang]/projects/[slug]/page.tsx`, built from `components/case-study/`.
+
+## Folders
+
+```
+app/                 routes (Next.js App Router), globals.css + styles/
+  [lang]/            /en and /pt: layout, home page, case studies, 404, share image
+components/
+  sections/          one file per home-page section (table above)
+  case-study/        header, sections, tech list, gallery, next link of a case study
+  comic/             manga building blocks: Episode, Panel, Title, PhotoScene, BlockBuild
+  motion/            scroll animation helpers: InOut, Parallax, Words, Reveal, useStill, useMedia
+  eggs/              easter eggs: Byte the drone, Return by Death (Konami code), save points, web shooter
+  *.tsx              shared bits: Nav, Scene, Placeholder, Screenshot, Stamp, ProjectLinks, CopyEmail…
+content/             projects, skills, image map
+dictionaries/        en/ and pt/ copy, one JSON per page area
+lib/                 site constants, locale helpers
+tests/               node --test suites
+docs/                specs, plans, second-brain backup (start at docs/README.md)
+```
