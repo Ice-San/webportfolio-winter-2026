@@ -1,0 +1,50 @@
+/* Interactive pieces: chat bubbles, buttons, chips. */
+@layer components {
+  .chat {
+    border: 1px solid var(--line);
+    border-radius: 1.1rem 1.1rem 1.1rem 0.25rem;
+    background: var(--paper);
+    padding: 0.75rem 1rem;
+    line-height: 1.45;
+  }
+  .chat-me {
+    border-color: var(--ink);
+    border-radius: 1.1rem 1.1rem 0.25rem 1.1rem;
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 0 1.25rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-solid {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-solid:hover {
+    border-color: var(--red);
+    background: var(--red);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.125rem 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+}

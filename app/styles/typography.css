@@ -1,0 +1,72 @@
+/* Text and layout classes: kickers, titles, story prose, manga panels, screentone. */
+@layer components {
+  .slate {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  /* "// EP.01": code-comment kickers in the accent. */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red-text);
+  }
+  .kicker::before {
+    content: "// ";
+    /* empty alt text: screen readers skip the decoration */
+    content: "// " / "";
+  }
+  .title {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .prose-story {
+    max-width: 62ch;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+  /* A side note: one red rule, no box. */
+  .note {
+    border-left: 2px solid var(--red);
+    padding: 0.125rem 0 0.125rem 0.875rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* A manga panel, minimal: one hairline, no shadow. */
+  .panel {
+    position: relative;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .panel-night {
+    border-color: var(--night);
+    background: var(--night);
+    color: var(--night-fg);
+  }
+
+  /* Screentone: the fine dot pattern of manga shading. --dot sets the ink. */
+  .tone {
+    background-image: radial-gradient(var(--dot, rgb(17 17 16 / 0.13)) 0.9px, transparent 1.1px);
+    background-size: 6px 6px;
+  }
+  /* Outlined numerals behind episode headers. */
+  .outline-num {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--line);
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    line-height: 0.8;
+  }
+  .jp {
+    font-family: var(--font-jp);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.35em;
+  }
+}

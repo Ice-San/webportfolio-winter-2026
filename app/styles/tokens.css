@@ -1,0 +1,49 @@
+/* Design tokens. v3: minimal. One quiet ground from top to bottom; the fandom lives in the details:
+   a web thread down the margin, anime episode numbers, a game HUD, code as decoration. */
+:root {
+  color-scheme: light;
+  --paper: #F6F5F1;
+  --paper-2: #ECEAE4;
+  --ink: #111110;
+  --muted: #66645E;
+  --line: #DAD7CF;
+  --red: #E0241B;
+  /* #E0241B is under 4.5:1 on paper for small text, so text uses a darker step */
+  --red-text: #BA1C14;
+  --blue: #2350D8;
+  /* Night-scene colours, only ever inside its own frame. */
+  --yellow: #F2C230;
+  --night: #0F1322;
+  --night-2: #1A2034;
+  --night-fg: #ECEAE3;
+  --glow: #8DD2FF;
+
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --accent: var(--red);
+  --accent-text: var(--red-text);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-red: var(--red);
+  --color-red-text: var(--red-text);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-fg: var(--night-fg);
+  --color-glow: var(--glow);
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Consolas, monospace;
+  /* Decorative Japanese only (episode numbers, the katakana name): system fonts, no webfont download. */
+  --font-jp: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+}
