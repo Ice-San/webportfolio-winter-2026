@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { FileDown, Menu } from 'lucide-react'
 import type { Dictionary } from '@/app/[lang]/dictionaries'
@@ -6,8 +5,8 @@ import type { Locale } from '@/lib/i18n'
 import { AutoHide } from './AutoHide'
 import { LangSwitch } from './LangSwitch'
 import { MenuPanel } from './MenuPanel'
+import { Monogram } from './Monogram'
 import { WebToggle } from './eggs/WebShooter'
-import face from '@/public/ruben-face.webp'
 
 // ponytail: one CV for both languages until public/cv-pt.pdf exists; then switch to `/cv-${lang}.pdf`.
 export const CV_HREF = '/cv-en.pdf'
@@ -41,7 +40,7 @@ export function Nav({ dict, lang }: { dict: Dictionary; lang: Locale }) {
       </a>
       <nav aria-label={t.menu} className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 sm:gap-3 sm:px-6">
         <Link href={`/${lang}`} aria-label={t.home} className="flex items-center gap-2.5">
-          <Image src={face} alt="" width={36} height={36} priority className="size-9 rounded-full ring-1 ring-ink" />
+          <Monogram />
           <span className="hidden font-semibold tracking-tight sm:inline">Ruben Costa</span>
         </Link>
         <ul className="ml-auto hidden items-center gap-6 text-sm lg:flex">{items}</ul>
