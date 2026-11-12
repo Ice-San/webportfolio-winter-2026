@@ -12,7 +12,7 @@ type Stop = (typeof DRONE_STOPS)[number]
 
 // Byte, the little drone that flies the whole page with the visitor and says one line per section. It weaves around
 // the picture side of the screen (text lives on the left), trailing a little behind the scroll and leaning into it.
-// A homemade spider-drone: red spider on the shell, and a spider-sense tingle when you scroll fast.
+// A homemade drone with a red web on its shell, and a spider-sense tingle when you scroll fast.
 // Decorative: everything it says is flavour, so it stays out of the accessibility tree.
 export function Drone({ lines }: { lines: Record<Stop, string> }) {
   const still = useStill()
