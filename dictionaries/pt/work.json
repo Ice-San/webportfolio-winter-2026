@@ -33,10 +33,9 @@
   },
   "skills": {
     "slate": "Árvore de competências",
-    "title": "Competências, com provas",
-    "intro": "Sem percentagens. Cada competência indica o projeto que a prova.",
-    "usedIn": "Provado em",
-    "set": "Ramo",
+    "title": "Com o que construo",
+    "intro": "As ferramentas que uso, e os projetos onde as usei.",
+    "usedIn": "Usado em",
     "groups": {
       "frontend": "Frontend",
       "backend": "Backend",
