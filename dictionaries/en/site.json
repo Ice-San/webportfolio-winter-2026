@@ -68,5 +68,16 @@
     "offscreen": "Side quests: games, anime and films. Flip the red card for Rule #1.",
     "ch04": "Lamp on, code on the screen, me floating next to him. A brand new day.",
     "credits": "End of the season. Want to start over? Tap the skull and Return by Death takes you back to zero. Nothing you learned is lost."
+  },
+  "web": {
+    "top": "The cover: Ruben Costa, a full-stack developer who builds web apps end to end, from the database to the interface.",
+    "ch01": "Episode 1: Minecraft servers with friends, aged 12 to 15. None shipped, but it was his first try at building something for other people.",
+    "ch02": "Episode 2: Animes Cold, an anime Discord server. He built two bots for it, Estela for moderation and Emilia-Tan for the community, plus a website.",
+    "ch03": "Episode 3: self-taught alongside a vocational IT course, then PathPals as his PAP, and now the last subject of a CTeSP at IPCB.",
+    "work": "The four projects, in the order he built them: PathPals, Manager, Budget Builder and GeekHatch. Each card opens a full case study.",
+    "skills": "The skill tree: frontend, backend, data and engineering practices. Every skill names the project that proves it.",
+    "offscreen": "Side quests: games, films and anime, and what shaped him: Spider-Man, Re:Zero, Fight Club and The Social Network.",
+    "ch04": "Now: finishing his CTeSP, looking for a first full-stack role, building Budget Builder and running the GeekHatch beta.",
+    "credits": "Contact: copy his email, or find him on GitHub (Ice-San) and LinkedIn. His CV is here too."
   }
 }

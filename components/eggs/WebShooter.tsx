@@ -1,25 +1,35 @@
 'use client'
 import { createContext, useContext, useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useStill } from '../motion/useStill'
+import { STOP_SELECTOR, type Stop } from './drone/stops'
+import { Splat, type Shot } from './web-shooter/Splat'
 
-// Easter egg: switch the web-shooter on in the nav, then click any empty spot to shoot a web line to it.
-type Shot = { id: number; x: number; y: number; ox: number; oy: number }
-const WebContext = createContext<{ on: boolean; toggle: () => void }>({ on: false, toggle: () => {} })
+// Easter egg: switch the web-shooter on in the nav, then click any empty spot to shoot a web to it. The web fires
+// from Byte when it's on screen, and Byte explains the section it landed on (see Drone, `useWebHit`).
+type Hit = { stop: Stop; at: number }
+const WebContext = createContext<{ on: boolean; toggle: () => void; hit: Hit | null }>({ on: false, toggle: () => {}, hit: null })
+export const useWebHit = () => useContext(WebContext).hit
 
 export function WebShooter({ sfx, children }: { sfx: string; children: React.ReactNode }) {
   const still = useStill()
   const [on, setOn] = useState(false)
   const [shots, setShots] = useState<Shot[]>([])
+  const [hit, setHit] = useState<Hit | null>(null)
 
   useEffect(() => {
     if (!on) return
     document.documentElement.style.cursor = 'crosshair'
     const onClick = (e: MouseEvent) => {
-      if ((e.target as Element).closest('a, button, input, summary, label, [role="button"]')) return
+      const target = e.target as Element
+      if (target.closest('a, button, input, summary, label, [role="button"]')) return
       const id = e.timeStamp
-      setShots((s) => [...s.slice(-4), { id, x: e.clientX, y: e.clientY, ox: innerWidth - 24, oy: innerHeight + 8 }])
+      const byte = document.getElementById('byte')?.getBoundingClientRect()
+      const [ox, oy] = byte?.width ? [byte.left + byte.width / 2, byte.top + byte.height / 2] : [innerWidth - 24, innerHeight + 8]
+      setShots((s) => [...s.slice(-4), { id, x: e.clientX, y: e.clientY, ox, oy }])
       setTimeout(() => setShots((s) => s.filter((t) => t.id !== id)), 1400)
+      const section = target.closest(STOP_SELECTOR)
+      if (section) setHit({ stop: section.id as Stop, at: id })
     }
     document.addEventListener('click', onClick)
     return () => {
@@ -29,41 +39,12 @@ export function WebShooter({ sfx, children }: { sfx: string; children: React.Rea
   }, [on])
 
   return (
-    <WebContext value={{ on, toggle: () => setOn((v) => !v) }}>
+    <WebContext value={{ on, toggle: () => setOn((v) => !v), hit }}>
       {children}
       <svg aria-hidden className="pointer-events-none fixed inset-0 z-[65] h-full w-full">
         <AnimatePresence>
           {shots.map((s) => (
-            <motion.g key={s.id} initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.4 }}>
-              <motion.line
-                x1={s.ox}
-                y1={s.oy}
-                x2={s.x}
-                y2={s.y}
-                stroke="#111110"
-                strokeWidth={1.2}
-                initial={{ pathLength: still ? 1 : 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 0.14 }}
-              />
-              {/* the splat: spokes and two rings where the web lands */}
-              {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
-                <line
-                  key={a}
-                  x1={s.x}
-                  y1={s.y}
-                  x2={s.x + Math.cos((a * Math.PI) / 180) * 22}
-                  y2={s.y + Math.sin((a * Math.PI) / 180) * 22}
-                  stroke="#111110"
-                  strokeWidth={0.8}
-                />
-              ))}
-              <circle cx={s.x} cy={s.y} r={9} fill="none" stroke="#111110" strokeWidth={0.8} />
-              <circle cx={s.x} cy={s.y} r={17} fill="none" stroke="#111110" strokeWidth={0.8} />
-              <text x={s.x + 24} y={s.y - 14} fill="#BA1C14" style={{ fontFamily: 'var(--font-mono)', fontSize: 13, letterSpacing: '0.12em' }}>
-                {sfx}
-              </text>
-            </motion.g>
+            <Splat key={s.id} s={s} still={still} sfx={sfx} />
           ))}
         </AnimatePresence>
       </svg>

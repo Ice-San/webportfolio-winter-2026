@@ -7,6 +7,7 @@ export function Hud({ attempt, toast, onDie, labels }: { attempt: number; toast:
   return (
     <>
       <button
+        id="hud-attempt"
         type="button"
         onClick={onDie}
         aria-label={labels.die}

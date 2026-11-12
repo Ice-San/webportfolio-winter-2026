@@ -68,5 +68,16 @@
     "offscreen": "Missões secundárias: jogos, anime e filmes. Vira o cartão vermelho para a Regra n.º 1.",
     "ch04": "Candeeiro aceso, código no ecrã e eu a flutuar ao lado dele. Um novo dia.",
     "credits": "Fim da temporada. Queres recomeçar? Toca na caveira e o Return by Death leva-te de volta ao zero. Nada do que aprendeste se perde."
+  },
+  "web": {
+    "top": "A capa: Ruben Costa, um programador full-stack que faz aplicações web de ponta a ponta, da base de dados à interface.",
+    "ch01": "Episódio 1: servidores de Minecraft com amigos, entre os 12 e os 15 anos. Nenhum foi lançado, mas foi a primeira vez que construiu algo para outras pessoas.",
+    "ch02": "Episódio 2: o Animes Cold, um servidor de Discord de anime. Criou dois bots para ele, a Estela para a moderação e a Emilia-Tan para a comunidade, e ainda um site.",
+    "ch03": "Episódio 3: aprendeu por conta própria ao lado do curso profissional de informática, depois veio o PathPals como PAP e agora a última disciplina de um CTeSP no IPCB.",
+    "work": "Os quatro projetos, pela ordem em que os construiu: PathPals, Manager, Budget Builder e GeekHatch. Cada cartão abre um estudo de caso completo.",
+    "skills": "A árvore de competências: frontend, backend, dados e práticas de engenharia. Cada competência indica o projeto que a prova.",
+    "offscreen": "Missões secundárias: jogos, filmes e anime, e o que o inspirou: Homem-Aranha, Re:Zero, Clube de Combate e A Rede Social.",
+    "ch04": "Agora: a terminar o CTeSP, à procura da primeira função como full-stack, a construir o Budget Builder e a gerir a beta do GeekHatch.",
+    "credits": "Contacto: copia o email dele ou encontra-o no GitHub (Ice-San) e no LinkedIn. O CV também está aqui."
   }
 }

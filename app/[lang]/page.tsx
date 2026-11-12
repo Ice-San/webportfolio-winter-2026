@@ -92,7 +92,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
       <Scene id="ch04" label={dict.ch04.title}>
         <BrandNewDay dict={dict} />
       </Scene>
-      <Drone lines={dict.drone} />
+      <Drone lines={dict.drone} web={dict.web} />
     </main>
   )
 }
