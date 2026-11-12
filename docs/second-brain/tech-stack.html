@@ -8,7 +8,7 @@
 <section><ul>
 <li>Next.js 16.4 App Router (already scaffolded), React 19.3, TypeScript, Tailwind CSS 4</li>
 <li>framer-motion (scroll scenes: <code>useScroll</code>/<code>useTransform</code>, sticky pinning; native scroll only) + lucide-react icons</li>
-<li>i18n per the Next 16 guide: <code>proxy.ts</code> locale redirect, <code>app/[lang]</code>, JSON dictionaries <code>en.json</code>/<code>pt.json</code>; no i18n library</li>
-<li>Content: dictionaries + <code>content/projects.ts</code>; no CMS or DB</li>
+<li>i18n per the Next 16 guide: <code>proxy.ts</code> locale redirect, <code>app/[lang]</code>, JSON dictionaries split per page area in <code>dictionaries/&lt;lang&gt;/{site,opening,chapters,work,ending}.json</code>, merged by <code>dictionaries/&lt;lang&gt;.ts</code> (since 2026-11-12); no i18n library</li><li>Styles: <code>app/globals.css</code> imports <code>app/styles/</code> (tokens, base, typography, controls, motion)</li><li>House rule: no file over 100 lines (ESLint <code>max-lines</code> for TS/TSX, <code>tests/line-limit.test.ts</code> for CSS/JSON); <code>README.md</code> maps where everything lives</li>
+<li>Content: dictionaries + <code>content/projects.ts</code> (one file per project in <code>content/projects/</code>); no CMS or DB</li>
 <li>pnpm 12</li><li>@vercel/analytics 2.0.1 (<code>&lt;Analytics /&gt;</code> in the root layout)</li><li>SEO files: <code>app/robots.ts</code>, <code>app/sitemap.ts</code>, <code>app/llms.txt/route.ts</code>, <code>lib/site.ts</code>, <code>components/JsonLd.tsx</code></li></ul></section>
 </main></body></html>
