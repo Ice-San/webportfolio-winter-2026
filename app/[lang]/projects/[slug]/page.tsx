@@ -73,7 +73,7 @@ export default async function CaseStudy({ params }: PageProps<'/[lang]/projects/
         }}
       />
       <Scene id="case" label={project.title}>
-        <article className="mx-auto grid max-w-6xl gap-12 px-4 pb-28 pt-12 sm:px-6">
+        <article className="column grid gap-12">
           <CaseHeader project={project} dict={dict} lang={lang} />
 
           <Screenshot src={projectShots[project.slug].cover} alt={project.cover[lang]} sizes="(min-width: 1152px) 72rem, 100vw" priority />

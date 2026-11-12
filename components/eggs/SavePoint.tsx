@@ -14,7 +14,7 @@ export function SavePoint({ id, label, sfx }: { id: string; label: string; sfx: 
   }, [inView, id, save])
 
   return (
-    <div id={id} ref={ref} className="mx-auto flex max-w-6xl scroll-mt-24 items-center gap-3 px-4 py-4 sm:px-6">
+    <div id={id} ref={ref} className="column flex scroll-mt-24 items-center gap-3 py-4">
       <span aria-hidden className={`size-2.5 shrink-0 rotate-45 border border-ink transition-colors duration-500 ${inView ? 'bg-red' : ''}`} />
       <span className="slate">{label}</span>
       <span aria-hidden className="h-px flex-1 bg-line" />

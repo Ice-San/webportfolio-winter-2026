@@ -5,7 +5,7 @@ import { Title } from './Title'
 // a huge outlined episode number that rises behind the title.
 export function Episode({ n, slate, title, nod }: { n: string; slate: string; title: string; nod: string }) {
   return (
-    <header className="relative isolate grid gap-5 pb-4 pt-8 sm:pb-6 sm:pt-12">
+    <header className="relative isolate grid gap-5">
       <Parallax speed={0.35} className="pointer-events-none absolute -top-6 right-0 -z-10 select-none">
         <span aria-hidden className="outline-num block text-[clamp(9rem,30vw,24rem)]">
           {n}

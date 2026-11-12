@@ -9,8 +9,8 @@ export default async function NotFound() {
   const t = (await getDictionary(locale)).notFound
   return (
     <main id="main">
-      <Scene id="not-found" label={t.title}>
-        <div className="mx-auto grid min-h-[80svh] max-w-6xl content-center px-4 py-16 sm:px-6">
+      <Scene id="not-found" label={t.title} flush>
+        <div className="column section-y grid min-h-[80svh] content-center">
           <div className="relative grid grid-cols-[minmax(0,1fr)] gap-6 overflow-hidden rounded-2xl bg-night p-6 text-night-fg sm:p-12">
             <div
               aria-hidden

@@ -13,7 +13,7 @@ const groups: Skill['group'][] = ['frontend', 'backend', 'data', 'practices']
 export function Abilities({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const t = dict.skills
   return (
-    <div className="mx-auto grid max-w-6xl gap-14 px-4 py-12 sm:px-6">
+    <div className="column grid gap-14">
       <header className="grid gap-5">
         <p className="kicker">{t.slate}</p>
         <Title className="text-[clamp(2.5rem,7vw,5.5rem)]">{t.title}</Title>

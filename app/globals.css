@@ -5,9 +5,11 @@
    base.css       html/body, selection, focus ring
    typography.css kicker, title, prose-story, note, panel, tone, outline-num
    controls.css   chat bubbles, btn, chip
+   layout.css     .column (the content column) and .section-y (space between sections)
    motion.css     keyframes and the reduced-motion override */
 @import "./styles/tokens.css";
 @import "./styles/base.css";
 @import "./styles/typography.css";
 @import "./styles/controls.css";
+@import "./styles/layout.css";
 @import "./styles/motion.css";

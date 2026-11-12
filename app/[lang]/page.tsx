@@ -62,7 +62,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
           ],
         }}
       />
-      <Scene id="top" label={dict.cover.label}>
+      <Scene id="top" label={dict.cover.label} flush>
         <Cover dict={dict} />
       </Scene>
       <Scene id="ch01" label={dict.ch01.title}>

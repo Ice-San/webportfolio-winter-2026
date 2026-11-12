@@ -27,7 +27,7 @@ export function TheServer({ dict }: { dict: Dictionary }) {
   )
 
   return (
-    <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-8 sm:px-6">
+    <div className="column grid gap-10">
       <Episode n="02" slate={t.slate} title={t.title} nod={t.nod} />
 
       {/* Text on the left; the server card and the old site stay pinned on the right while you read. */}

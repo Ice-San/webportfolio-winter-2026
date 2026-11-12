@@ -38,7 +38,7 @@ export function Nav({ dict, lang }: { dict: Dictionary; lang: Locale }) {
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper">
         {dict.common.skip}
       </a>
-      <nav aria-label={t.menu} className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 sm:gap-3 sm:px-6">
+      <nav aria-label={t.menu} className="column flex h-14 items-center gap-2 sm:gap-3">
         <Link href={`/${lang}`} aria-label={t.home} className="flex items-center gap-2.5">
           <Monogram />
           <span className="hidden font-semibold tracking-tight sm:inline">Ruben Costa</span>

@@ -13,7 +13,7 @@ export function SelfMade({ dict }: { dict: Dictionary }) {
   const t = dict.ch03
 
   return (
-    <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-8 sm:px-6">
+    <div className="column grid gap-10">
       <Episode n="03" slate={t.slate} title={t.title} nod={t.nod} />
 
       <div className="grid gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">

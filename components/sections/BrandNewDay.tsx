@@ -13,7 +13,7 @@ export function BrandNewDay({ dict }: { dict: Dictionary }) {
   const c = dict.credits
 
   return (
-    <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 sm:px-6">
+    <div className="column grid gap-12">
       <Episode n="04" slate={t.slate} title={t.title} nod={t.nod} />
 
       <div className="grid gap-6 lg:w-1/2 lg:pr-6">

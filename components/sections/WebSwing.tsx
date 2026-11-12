@@ -15,7 +15,7 @@ export function WebSwing({ label, flip = false }: { sfx?: string; label: string;
   const drop = useTransform(scrollYProgress, [0, 0.45], ['30%', '100%'])
 
   return (
-    <div ref={ref} aria-hidden className="relative mx-auto grid h-[26svh] max-w-6xl grid-cols-2 items-center gap-6 overflow-x-clip px-4 sm:px-6">
+    <div ref={ref} aria-hidden className="column relative grid h-[26svh] grid-cols-2 items-center gap-6 overflow-x-clip">
       <motion.div style={still ? REST : { rotate, originY: 0 }} className="relative h-[14svh] w-8 self-start justify-self-center sm:h-[18svh]">
         <motion.div style={still ? { height: '100%' } : { height: drop }} className="relative mx-auto w-px bg-ink/50">
           <WebGlyph className="absolute left-1/2 top-full size-8 -translate-x-1/2 text-ink" weight={0.9} />

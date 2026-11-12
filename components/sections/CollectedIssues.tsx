@@ -16,18 +16,29 @@ export function CollectedIssues({ dict, lang }: { dict: Dictionary; lang: Locale
   const t = dict.work
   const track = useRef<HTMLDivElement>(null)
   const row = useRef<HTMLDivElement>(null)
+  const col = useRef<HTMLDivElement>(null)
   const still = useStill()
   const wide = useMedia('(min-width: 1024px)')
   const shelf = wide && !still
   const [distance, setDistance] = useState(0)
+  const [inset, setInset] = useState(0)
 
   useLayoutEffect(() => {
     const el = row.current
-    if (!shelf || !el) return
-    const measure = () => setDistance(Math.max(0, el.scrollWidth - innerWidth + 48))
+    const c = col.current
+    if (!shelf || !el || !c) return
+    // The shelf starts on the column's left edge and stops when the last card reaches its right edge,
+    // measured from a real .column so it always matches the other sections.
+    const measure = () => {
+      const box = c.getBoundingClientRect()
+      const pad = parseFloat(getComputedStyle(c).paddingLeft)
+      setInset(box.left + pad)
+      setDistance(Math.max(0, el.scrollWidth - (box.right - pad)))
+    }
     measure()
     const ro = new ResizeObserver(measure)
     ro.observe(el)
+    ro.observe(c)
     return () => ro.disconnect()
   }, [shelf])
 
@@ -36,11 +47,12 @@ export function CollectedIssues({ dict, lang }: { dict: Dictionary; lang: Locale
 
   return (
     <div ref={track} style={shelf ? { height: `calc(100svh + ${distance}px)` } : undefined}>
-      <div className={shelf ? 'sticky top-14 flex h-[calc(100svh-3.5rem)] items-center overflow-hidden bg-paper' : 'py-8'}>
+      <div ref={col} aria-hidden className="column h-0" />
+      <div className={shelf ? 'sticky top-14 flex h-[calc(100svh-3.5rem)] items-center overflow-hidden bg-paper' : undefined}>
         <motion.div
           ref={row}
-          style={shelf ? { x } : undefined}
-          className={`flex gap-6 px-4 sm:px-6 ${shelf ? 'w-max items-stretch pl-[max(1.5rem,calc((100vw-72rem)/2))]' : 'mx-auto max-w-6xl flex-col'}`}
+          style={shelf ? { x, paddingLeft: inset } : undefined}
+          className={`flex gap-6 ${shelf ? 'w-max items-stretch' : 'column flex-col'}`}
         >
           <header className={`grid content-center gap-5 ${shelf ? 'w-[26rem] shrink-0 pr-6' : ''}`}>
             <p className="kicker">

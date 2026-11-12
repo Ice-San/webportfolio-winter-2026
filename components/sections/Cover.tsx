@@ -22,7 +22,7 @@ export function Cover({ dict }: { dict: Dictionary }) {
 
   return (
     <div className="relative isolate">
-      <div ref={ref} className="mx-auto grid min-h-[calc(100svh-3.5rem)] max-w-6xl grid-rows-[auto_1fr_auto] gap-8 px-4 pb-6 pt-6 sm:px-6 sm:pt-10">
+      <div ref={ref} className="column grid min-h-[calc(100svh-3.5rem)] grid-rows-[auto_1fr_auto] gap-8 pb-6 pt-6 sm:pt-10">
         <p className="kicker">{t.kicker}</p>
 
         <div className="relative grid content-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
@@ -68,7 +68,7 @@ export function Cover({ dict }: { dict: Dictionary }) {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+      <div className="column section-y">
         <Words text={t.headline} className="title max-w-[17ch] text-[clamp(2.25rem,6vw,5.25rem)]" />
       </div>
     </div>

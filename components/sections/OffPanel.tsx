@@ -10,7 +10,7 @@ import { RuleSticker } from '../eggs/RuleSticker'
 export function OffPanel({ dict }: { dict: Dictionary }) {
   const t = dict.offscreen
   return (
-    <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+    <div className="column grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <div className="grid gap-6">
         <p className="kicker">{t.slate}</p>
         <Title className="text-[clamp(2.5rem,7vw,5.5rem)]">{t.title}</Title>

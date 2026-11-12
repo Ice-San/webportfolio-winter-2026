@@ -1,0 +1,21 @@
+/* The one spacing system. Every block of content sits in .column, and every section gets .section-y
+   (Scene applies it), so all sections share the same edges and the same space between them. */
+@layer components {
+  .column {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  .section-y {
+    padding-block: 4rem;
+  }
+  @media (min-width: 40rem) {
+    .column {
+      padding-inline: 1.5rem;
+    }
+    .section-y {
+      padding-block: 6rem;
+    }
+  }
+}
