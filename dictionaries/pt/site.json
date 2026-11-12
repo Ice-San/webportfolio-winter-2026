@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Ruben Costa · Programador full-stack",
+    "description": "Ruben Costa é programador full-stack em Portugal. De um servidor de Discord ao GeekHatch: a história, os projetos e as competências por trás deles.",
+    "projectSuffix": "Ruben Costa",
+    "keywords": [
+      "Ruben Costa",
+      "programador full-stack",
+      "programador júnior",
+      "programador web Portugal",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Playwright",
+      "CI/CD",
+      "Turborepo",
+      "Tailwind CSS",
+      "portefólio de programador"
+    ]
+  },
+  "common": {
+    "skip": "Saltar para o conteúdo",
+    "tbd": "Por escrever — Ruben",
+    "image": "Imagem",
+    "page": "Página"
+  },
+  "nav": {
+    "home": "Ruben Costa, voltar ao topo",
+    "story": "História",
+    "projects": "Projetos",
+    "skills": "Competências",
+    "now": "Agora",
+    "contact": "Contacto",
+    "cv": "CV",
+    "menu": "Menu",
+    "switchTo": "EN",
+    "switchLabel": "Switch to English",
+    "web": "Lança-teias: clica em qualquer sítio da página para lançar uma teia"
+  },
+  "hud": {
+    "attempt": "Tentativa",
+    "die": "Regresso pela Morte: voltar ao último ponto de gravação",
+    "saved": "Progresso gravado",
+    "died": "Morreste",
+    "returning": "A regressar ao último ponto de gravação…",
+    "konami": "Psst: ↑ ↑ ↓ ↓ ← → ← → B A",
+    "console": "Olá, colega programador. Esta página é Next.js 16, framer-motion e muitas tentativas. Experimenta o código Konami. E se estás a contratar: rubencosta.dev.2004@gmail.com"
+  },
+  "notFound": {
+    "slate": "Morreste",
+    "title": "Página não encontrada",
+    "line": "A regressar ao último ponto de gravação…",
+    "home": "Voltar ao último ponto de gravação",
+    "rewind": "Rebobinar"
+  },
+  "drone": {
+    "top": "Olá, sou o Byte, o drone do Ruben. Vou voar a página toda contigo. Desliza!",
+    "ch01": "Episódio 1: um servidor de Minecraft. Foi aqui que a curiosidade começou, um bloco de cada vez.",
+    "ch02": "Um servidor de Discord para fãs de anime, dois bots e um site. Tentativa número dois.",
+    "ch03": "Aqui não há atalhos: um curso, muitos commits e muitas tentativas.",
+    "work": "Registo de missões desbloqueado. Cada cartão abre um estudo de caso completo.",
+    "skills": "Árvore de competências: cada uma liga ao projeto que a prova.",
+    "offscreen": "Missões secundárias: jogos, anime e filmes. Vira o cartão vermelho para a Regra n.º 1.",
+    "ch04": "Candeeiro aceso, código no ecrã e eu a flutuar ao lado dele. Um novo dia.",
+    "credits": "Fim da temporada. Queres recomeçar? Toca na caveira e o Return by Death leva-te de volta ao zero. Nada do que aprendeste se perde."
+  }
+}

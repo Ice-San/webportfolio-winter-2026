@@ -1,0 +1,44 @@
+{
+  "offscreen": {
+    "slate": "Side quests",
+    "title": "You are not your code.",
+    "body": [
+      "Outside of code I play video games, watch films and series, and follow anime. That last one is where Animes Cold and GeekHatch come from.",
+      "Some of what shaped me, and this site: Spider-Man, Subaru Natsuki from Re:Zero, Fight Club and The Social Network."
+    ],
+    "image": "Me at a café at night, smiling, with an iced drink and my phone",
+    "ruleFront": "Rule #1",
+    "ruleBack": "Close the laptop sometimes. The best ideas show up away from the screen.",
+    "ruleLabel": "Flip the rule sticker"
+  },
+  "ch04": {
+    "slate": "Now",
+    "title": "Brand new day",
+    "nod": "A fresh start, with everything I've learned so far.",
+    "body": [
+      "I'm finishing the last subject of my CTeSP and looking for my first role as a full-stack developer.",
+      "Right now I'm building Budget Builder and running the GeekHatch beta: Next.js, Express and PostgreSQL, from the schema to the interface."
+    ],
+    "learnTitle": "What I want to learn next",
+    "scene": "Night. Ruben at his desk at home, coding by the light of the lamp and the monitor.",
+    "aiName": "AI",
+    "meName": "Ruben",
+    "ai1": "Evening, Ruben. What are we building today?",
+    "me1": "Something new. It's a brand new day.",
+    "ai2": "Then let's make sure they can reach you.",
+    "end": "To be continued…"
+  },
+  "credits": {
+    "title": "Contact",
+    "lead": "Have a role or a project in mind? Get in touch.",
+    "writtenBy": "Designed and built by your friendly neighbourhood full-stack developer,",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV",
+    "cvLink": "Download the CV (PDF)",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "footer": "No Minecraft servers were harmed in the making of this site."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "ch02": {
+    "slate": "≈2022",
+    "title": "The server",
+    "nod": "You don't build a community alone. Sometimes you build the bots too.",
+    "beats": [
+      "One Discord server",
+      "Two bots join",
+      "A website for the community"
+    ],
+    "channels": [
+      "general",
+      "anime",
+      "manga",
+      "bots"
+    ],
+    "serverName": "Animes Cold",
+    "serverAlt": "The AniColds Discord server card: 9,343 members, 297 online, around since October 2020",
+    "botTag": "Bot",
+    "botName": "Emilia-Tan",
+    "botMod": "Moderation: keeping the server safe and organised.",
+    "botCommunity": "Community: giving members more reasons to talk and come back.",
+    "body": [
+      "It started with Animes Cold, a simple Discord server for anime and manga fans that grew into a community.",
+      "To help run it, I built two Discord bots: Estela, to improve moderation, and Emilia-Tan, named after the Re:Zero character, to bring more life to the community.",
+      "I also made small informative pages with plain HTML, CSS and JavaScript, including a website for the server.",
+      "That server is where everything I build today begins."
+    ],
+    "imageServer": "Screenshot of the Animes Cold Discord server: channel list and bot messages (crop out usernames)",
+    "imageSite": "The old Anime's Cold website: a header banner with tabs for home, premium, news, support and the Emilia-Tan bot",
+    "attemptTwo": "In 2024 I tried to go further with AniColds, a web app for the community. That was attempt number two.",
+    "attemptLabel": "Attempt #02"
+  },
+  "ch03": {
+    "slate": "Curso profissional → CTeSP",
+    "title": "Self-made",
+    "nod": "No mentor, no kit. Just a homemade suit and a lot of trial and error.",
+    "steps": [
+      {
+        "when": "Self-taught",
+        "text": "I learned on my own alongside the curso profissional, a Portuguese vocational IT course: documentation, tutorials and a lot of trial and error."
+      },
+      {
+        "when": "PAP · 2024",
+        "text": "My final project for the course (the PAP) was PathPals: a school-transport app where students request a ride to school and the school confirms it."
+      },
+      {
+        "when": "First full-stack app",
+        "text": "A front end, a back end and a database working together. That was when I knew I could actually do this."
+      },
+      {
+        "when": "CTeSP · IPCB",
+        "text": "After that came a CTeSP at IPCB, a higher technical course, where I'm now finishing the last subject."
+      }
+    ],
+    "sketch": "Drawn, erased, redrawn. That's the suit.",
+    "courseLabel": "CTeSP course",
+    "courseTbd": "Exact CTeSP course name",
+    "problemTitle": "The problem that changed how I think",
+    "problemTbd": "One real technical problem I got stuck on, and how I solved it.",
+    "image": "PathPals, my PAP: the landing page with the hand-drawn logo over two students outside a school"
+  }
+}

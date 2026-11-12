@@ -1,0 +1,37 @@
+{
+  "cover": {
+    "label": "Introduction",
+    "kicker": "Portfolio · 2026",
+    "role": "Full-stack developer",
+    "name": "Ruben Costa",
+    "headline": "Curiosity brought me here. Building things made me a developer.",
+    "subline": "I build web apps end to end, from the database to the interface.",
+    "ctaStory": "Start the story",
+    "ctaWork": "See the projects",
+    "ctaCv": "Download CV",
+    "scroll": "Scroll",
+    "photoAlt": "Ruben smiling in a white T-shirt in front of a colourful street mural"
+  },
+  "ch01": {
+    "slate": "Age 12–15",
+    "title": "Re: Starting from zero",
+    "nod": "Every retry starts from zero. You keep what you learned.",
+    "body": [
+      "I was somewhere between 12 and 15 when Minecraft stopped being just a game. I wanted to know how the worlds, the servers and the rules behind them actually worked.",
+      "With friends, I tried to set up our own Minecraft servers. None of them ever shipped.",
+      "They still counted. It was the first time I tried to build something for other people to use."
+    ],
+    "image": "A Minecraft build from back then: a round hub in a lake with four paths leading out to the forest",
+    "friends": "Building with friends",
+    "attempt": "Attempt #01"
+  },
+  "save": {
+    "label": "Checkpoint",
+    "sfx": "Saved"
+  },
+  "swing": {
+    "sfx": "Thwip!",
+    "toCh02": "Next episode: the server",
+    "toWork": "Next: the quest log"
+  }
+}

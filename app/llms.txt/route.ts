@@ -1,7 +1,7 @@
 import { projects } from '@/content/projects'
 import { skills } from '@/content/skills'
 import { EMAIL, GITHUB, LINKEDIN, NAME, SITE_URL } from '@/lib/site'
-import en from '@/dictionaries/en.json'
+import en from '@/dictionaries/en'
 
 // /llms.txt (llmstxt.org): a plain-text map of the whole site for AI assistants and crawlers, built from the same
 // content as the pages so it never drifts.

@@ -1,0 +1,52 @@
+{
+  "work": {
+    "slate": "Registo de missões",
+    "title": "Quatro projetos, pela ordem em que os construí",
+    "intro": "Cada um tem um estudo de caso completo.",
+    "sideways": "Continua a deslizar: o registo anda para o lado.",
+    "issue": "Missão",
+    "caseStudy": "Ler o estudo de caso",
+    "demo": "Demo ao vivo",
+    "source": "Código",
+    "notPublic": "Demo e código não públicos",
+    "sourceNotPublic": "Código não público",
+    "payoff": "O servidor cresceu."
+  },
+  "case": {
+    "back": "Voltar aos projetos",
+    "type": "Tipo",
+    "status": "Estado",
+    "role": "Papel",
+    "roleValue": "Desenhei-o e construí-o sozinho",
+    "timeline": "Período",
+    "links": "Ligações",
+    "idea": "A ideia",
+    "challenge": "O desafio",
+    "approach": "A minha abordagem",
+    "implementation": "Implementação",
+    "technology": "Tecnologia",
+    "result": "O resultado",
+    "learned": "O que aprendi",
+    "gallery": "Galeria",
+    "next": "Próximo projeto",
+    "end": "Voltar a todos os projetos"
+  },
+  "skills": {
+    "slate": "Árvore de competências",
+    "title": "Competências, com provas",
+    "intro": "Sem percentagens. Cada competência indica o projeto que a prova.",
+    "usedIn": "Provado em",
+    "set": "Ramo",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Dados",
+      "practices": "Práticas de engenharia"
+    },
+    "labels": {
+      "used": "Usado em projetos",
+      "familiar": "Familiarizado",
+      "learning": "A aprender"
+    }
+  }
+}

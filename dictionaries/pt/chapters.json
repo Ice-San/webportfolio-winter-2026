@@ -1,0 +1,63 @@
+{
+  "ch02": {
+    "slate": "≈2022",
+    "title": "O servidor",
+    "nod": "Uma comunidade não se constrói sozinho. Às vezes também se constroem os bots.",
+    "beats": [
+      "Um servidor de Discord",
+      "Entram dois bots",
+      "Um site para a comunidade"
+    ],
+    "channels": [
+      "geral",
+      "anime",
+      "manga",
+      "bots"
+    ],
+    "serverName": "Animes Cold",
+    "serverAlt": "O cartão do servidor de Discord AniColds: 9.343 membros, 297 online, desde outubro de 2020",
+    "botTag": "Bot",
+    "botName": "Emilia-Tan",
+    "botMod": "Moderação: manter o servidor seguro e organizado.",
+    "botCommunity": "Comunidade: dar aos membros mais razões para falar e voltar.",
+    "body": [
+      "Tudo começou com o Animes Cold, um servidor de Discord simples para fãs de anime e manga que cresceu até se tornar uma comunidade.",
+      "Para o gerir, criei dois bots de Discord: a Estela, para melhorar a moderação, e a Emilia-Tan, com o nome da personagem de Re:Zero, para dar mais vida à comunidade.",
+      "Também fiz pequenas páginas informativas só com HTML, CSS e JavaScript, incluindo um site para o servidor.",
+      "É nesse servidor que começa tudo o que construo hoje."
+    ],
+    "imageServer": "Captura de ecrã do servidor Animes Cold no Discord: lista de canais e mensagens dos bots (sem nomes de utilizadores)",
+    "imageSite": "O antigo site do Anime's Cold: um banner com separadores para início, premium, jornal, suporte e o bot Emilia-Tan",
+    "attemptTwo": "Em 2024 tentei ir mais longe com o AniColds, uma aplicação web para a comunidade. Foi a tentativa número dois.",
+    "attemptLabel": "Tentativa #02"
+  },
+  "ch03": {
+    "slate": "Curso profissional → CTeSP",
+    "title": "Feito à mão",
+    "nod": "Sem mentor, sem kit. Só um fato feito em casa e muita tentativa e erro.",
+    "steps": [
+      {
+        "when": "Autodidata",
+        "text": "Aprendi por conta própria ao mesmo tempo que fazia o curso profissional de informática: documentação, tutoriais e muita tentativa e erro."
+      },
+      {
+        "when": "PAP · 2024",
+        "text": "A minha Prova de Aptidão Profissional (PAP) foi o PathPals: uma aplicação de transporte escolar em que os alunos pedem boleia para a escola e a escola confirma."
+      },
+      {
+        "when": "Primeira app full-stack",
+        "text": "Front end, back end e base de dados a funcionar em conjunto. Foi aí que percebi que conseguia mesmo fazer isto."
+      },
+      {
+        "when": "CTeSP · IPCB",
+        "text": "Depois veio um CTeSP no IPCB, um curso técnico superior, onde estou agora a terminar a última disciplina."
+      }
+    ],
+    "sketch": "Desenhado, apagado, redesenhado. É esse o fato.",
+    "courseLabel": "Curso CTeSP",
+    "courseTbd": "Nome exato do curso CTeSP",
+    "problemTitle": "O problema que mudou a minha forma de pensar",
+    "problemTbd": "Um problema técnico real em que fiquei preso, e como o resolvi.",
+    "image": "O PathPals, a minha PAP: a página inicial com o logótipo escrito à mão sobre dois alunos à porta de uma escola"
+  }
+}

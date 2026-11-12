@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Ruben Costa · Full-stack developer",
+    "description": "Ruben Costa is a full-stack developer from Portugal. From a Discord server to GeekHatch: the story, the projects and the skills behind them.",
+    "projectSuffix": "Ruben Costa",
+    "keywords": [
+      "Ruben Costa",
+      "full-stack developer",
+      "junior developer",
+      "web developer Portugal",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Playwright",
+      "CI/CD",
+      "Turborepo",
+      "Tailwind CSS",
+      "developer portfolio"
+    ]
+  },
+  "common": {
+    "skip": "Skip to content",
+    "tbd": "TBD — Ruben to write",
+    "image": "Image",
+    "page": "Page"
+  },
+  "nav": {
+    "home": "Ruben Costa, back to the top",
+    "story": "Story",
+    "projects": "Projects",
+    "skills": "Skills",
+    "now": "Now",
+    "contact": "Contact",
+    "cv": "CV",
+    "menu": "Menu",
+    "switchTo": "PT",
+    "switchLabel": "Mudar para português",
+    "web": "Web-shooter: click anywhere on the page to shoot a web"
+  },
+  "hud": {
+    "attempt": "Attempt",
+    "die": "Return by Death: rewind to the last save point",
+    "saved": "Checkpoint saved",
+    "died": "You died",
+    "returning": "Returning to the last save point…",
+    "konami": "Psst: ↑ ↑ ↓ ↓ ← → ← → B A",
+    "console": "Hey, fellow dev. This page is Next.js 16, framer-motion and a lot of retries. Try the Konami code. And if you're hiring: rubencosta.dev.2004@gmail.com"
+  },
+  "notFound": {
+    "slate": "You died",
+    "title": "Page not found",
+    "line": "Returning to the last save point…",
+    "home": "Return to the last save point",
+    "rewind": "Rewind"
+  },
+  "drone": {
+    "top": "Hi, I'm Byte, Ruben's drone. I'll fly the whole page with you. Scroll down!",
+    "ch01": "Episode 1: a Minecraft server. This is where the curiosity started, one block at a time.",
+    "ch02": "A Discord server for anime fans, two bots and a website. Attempt number two.",
+    "ch03": "No shortcuts here: a course, a lot of commits and plenty of retries.",
+    "work": "Quest log unlocked. Every card opens a full case study.",
+    "skills": "Skill tree: each skill links to the project that proves it.",
+    "offscreen": "Side quests: games, anime and films. Flip the red card for Rule #1.",
+    "ch04": "Lamp on, code on the screen, me floating next to him. A brand new day.",
+    "credits": "End of the season. Want to start over? Tap the skull and Return by Death takes you back to zero. Nothing you learned is lost."
+  }
+}

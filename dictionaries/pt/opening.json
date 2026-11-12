@@ -1,0 +1,37 @@
+{
+  "cover": {
+    "label": "Introdução",
+    "kicker": "Portefólio · 2026",
+    "role": "Programador full-stack",
+    "name": "Ruben Costa",
+    "headline": "A curiosidade trouxe-me até aqui. Construir coisas fez de mim programador.",
+    "subline": "Construo aplicações web de ponta a ponta, da base de dados à interface.",
+    "ctaStory": "Começar a história",
+    "ctaWork": "Ver os projetos",
+    "ctaCv": "Descarregar CV",
+    "scroll": "Desliza",
+    "photoAlt": "Ruben a sorrir, de T-shirt branca, em frente a um mural de arte urbana colorido"
+  },
+  "ch01": {
+    "slate": "12–15 anos",
+    "title": "Re: Começar do zero",
+    "nod": "Cada nova tentativa começa do zero. O que aprendeste fica.",
+    "body": [
+      "Tinha entre 12 e 15 anos quando o Minecraft deixou de ser só um jogo. Queria perceber como funcionavam os mundos, os servidores e as regras por trás deles.",
+      "Com amigos, tentei montar os nossos próprios servidores de Minecraft. Nenhum chegou a ser lançado.",
+      "Mesmo assim, contaram. Foi a primeira vez que tentei construir algo para outras pessoas usarem."
+    ],
+    "image": "Uma construção no Minecraft dessa altura: um centro redondo num lago com quatro caminhos para a floresta",
+    "friends": "A construir com amigos",
+    "attempt": "Tentativa #01"
+  },
+  "save": {
+    "label": "Ponto de gravação",
+    "sfx": "Gravado"
+  },
+  "swing": {
+    "sfx": "Thwip!",
+    "toCh02": "Próximo episódio: o servidor",
+    "toWork": "A seguir: o registo de missões"
+  }
+}

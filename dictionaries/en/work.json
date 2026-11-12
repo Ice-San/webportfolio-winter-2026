@@ -1,0 +1,52 @@
+{
+  "work": {
+    "slate": "Quest log",
+    "title": "Four projects, in the order I built them",
+    "intro": "Each one has a full case study.",
+    "sideways": "Keep scrolling: the log moves sideways.",
+    "issue": "Quest",
+    "caseStudy": "Read the case study",
+    "demo": "Live demo",
+    "source": "Source",
+    "notPublic": "Demo and source not public",
+    "sourceNotPublic": "Source not public",
+    "payoff": "The server grew up."
+  },
+  "case": {
+    "back": "Back to the projects",
+    "type": "Type",
+    "status": "Status",
+    "role": "Role",
+    "roleValue": "Designed and built it myself",
+    "timeline": "Timeline",
+    "links": "Links",
+    "idea": "The idea",
+    "challenge": "The challenge",
+    "approach": "My approach",
+    "implementation": "Implementation",
+    "technology": "Technology",
+    "result": "The result",
+    "learned": "What I learned",
+    "gallery": "Gallery",
+    "next": "Next project",
+    "end": "Back to all projects"
+  },
+  "skills": {
+    "slate": "Skill tree",
+    "title": "Skills, with receipts",
+    "intro": "No percentages. Every skill names the project that proves it.",
+    "usedIn": "Proven in",
+    "set": "Branch",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data",
+      "practices": "Engineering practices"
+    },
+    "labels": {
+      "used": "Used in projects",
+      "familiar": "Familiar",
+      "learning": "Learning"
+    }
+  }
+}
