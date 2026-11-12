@@ -35,7 +35,7 @@ export function Figure({ p, still, alt }: { p: MotionValue<number>; still: boole
   return (
     <motion.div
       style={still ? REST : { y: figureY }}
-      className="pointer-events-none relative order-first -mb-16 w-28 justify-self-end sm:-mb-28 sm:w-44 lg:order-none lg:mb-0 lg:w-80"
+      className="pointer-events-none relative order-first -mb-16 w-36 justify-self-end sm:-mb-28 sm:w-56 lg:order-none lg:mb-0 lg:w-[22rem] xl:w-[27rem]"
     >
       <motion.svg
         aria-hidden
@@ -55,7 +55,7 @@ export function Figure({ p, still, alt }: { p: MotionValue<number>; still: boole
             alt={alt}
             priority
             placeholder="blur"
-            sizes="(min-width: 1024px) 20rem, (min-width: 640px) 11rem, 7rem"
+            sizes="(min-width: 1280px) 27rem, (min-width: 1024px) 22rem, (min-width: 640px) 14rem, 9rem"
             className="h-full w-full object-cover object-[50%_30%] grayscale transition-[filter] duration-700 group-hover:grayscale-0"
           />
         </motion.div>
