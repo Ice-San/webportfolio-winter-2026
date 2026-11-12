@@ -44,6 +44,4 @@
   --color-glow: var(--glow);
   --font-sans: var(--font-archivo), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, Consolas, monospace;
-  /* Decorative Japanese only (episode numbers, the katakana name): system fonts, no webfont download. */
-  --font-jp: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
 }

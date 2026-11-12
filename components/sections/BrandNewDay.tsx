@@ -14,7 +14,7 @@ export function BrandNewDay({ dict }: { dict: Dictionary }) {
 
   return (
     <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-24 sm:px-6">
-      <Episode n="04" jp="最終話" slate={t.slate} title={t.title} nod={t.nod} />
+      <Episode n="04" slate={t.slate} title={t.title} nod={t.nod} />
 
       <div className="grid gap-6 lg:w-1/2 lg:pr-6">
         {t.body.map((b) => (
@@ -38,10 +38,6 @@ export function BrandNewDay({ dict }: { dict: Dictionary }) {
         <div className="grid gap-2">
           <p className="flex items-baseline gap-3 text-2xl font-semibold tracking-tight">
             {t.end}
-            {/* "Tsuzuku": the "to be continued" card at the end of an anime episode. */}
-            <span aria-hidden className="font-[family-name:var(--font-jp)] text-base text-red-text">
-              つづく
-            </span>
           </p>
           <p className="text-sm text-muted">
             {c.writtenBy} Ruben Costa · {c.footer}

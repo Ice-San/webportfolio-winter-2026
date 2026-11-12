@@ -64,9 +64,4 @@
     letter-spacing: -0.06em;
     line-height: 0.8;
   }
-  .jp {
-    font-family: var(--font-jp);
-    writing-mode: vertical-rl;
-    letter-spacing: 0.35em;
-  }
 }

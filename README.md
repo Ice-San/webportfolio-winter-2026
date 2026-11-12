@@ -20,8 +20,8 @@ pnpm build   # production build
   exports, so nothing that imports it changes. Examples: `content/projects.ts` + `content/projects/`,
   `components/eggs/Drone.tsx` + `components/eggs/drone/`.
 - Translated copy lives in `dictionaries/` (page text) and `content/` (projects, skills), each with an `en` and a
-  `pt` version (the tests check this). A few decorative strings stay inline in their component: the Japanese
-  titles (第一話…最終話, ルーベン・コスタ, つづく), "Byte", "EP.00 / 04", and the name/handles in the footer and nav.
+  `pt` version (the tests check this). A few decorative strings stay inline in their component:
+  "Byte", "EP.00 / 04", and the name/handles in the footer and nav.
 
 ## Where to change what
 

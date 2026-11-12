@@ -12,7 +12,7 @@ export function StartingFromZero({ dict }: { dict: Dictionary }) {
   const t = dict.ch01
   return (
     <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-8 sm:px-6">
-      <Episode n="01" jp="第一話" slate={t.slate} title={t.title} nod={t.nod} />
+      <Episode n="01" slate={t.slate} title={t.title} nod={t.nod} />
 
       {/* Text on the left, pictures on the right: the same reading line in every episode. */}
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-x-12">

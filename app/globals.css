@@ -3,7 +3,7 @@
 /* Global styles, split by job. Edit the file that matches what you change:
    tokens.css     colours, fonts, Tailwind theme names (bg-paper, text-red-text…)
    base.css       html/body, selection, focus ring
-   typography.css kicker, title, prose-story, note, panel, tone, outline-num, jp
+   typography.css kicker, title, prose-story, note, panel, tone, outline-num
    controls.css   chat bubbles, btn, chip
    motion.css     keyframes and the reduced-motion override */
 @import "./styles/tokens.css";
