@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "node --test \"tests/**/*.test.ts\""
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "framer-motion": "^14.12.0",
+    "lucide-react": "^1.71.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -23,5 +27,6 @@
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@12.3.4"
+  "packageManager": "pnpm@12.3.4",
+  "type": "module"
 }
