@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Key decisions — 2026-11 · Web Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header class="slate"><nav class="crumbs"><a href="index.html">← Web Portfolio Second Brain</a></nav><h1>Key decisions — 2026-11</h1></header>
+<section class="table-wrap"><table><thead><tr><th>Date</th><th>Decision</th><th>By</th></tr></thead><tbody>
+<tr><td>2026-11-11</td><td><b>Hybrid look:</b> warm Paper (#F3EEE5) for story text, Ink (#0F0E0D) for cinema scenes, burnt-orange accent.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Cinematic motion on native scroll:</b> no scroll-jacking, no smooth-scroll lib.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>References woven into the story</b> as nods; no stills, logos or art.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Bilingual EN/PT.</b></td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Featured projects:</b> PathPals → Manager → Budget Builder → GeekHatch. Never mention the PathPals Next.js rebuild. No code links for PathPals, Budget Builder or GeekHatch.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Status labels:</b> GeekHatch Beta (access only); Budget Builder in progress.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Contact:</b> dev email, GitHub Ice-San, LinkedIn devrubencosta, CV. No phone number, no old email, no Instagram.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Hero headline:</b> “Curiosity brought me here. Building things made me a developer.”</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Spec approved.</b> CTeSP: finishing the last subject. AniColds (2024) = “Attempt #2” in the story. Reuse the old cv.pdf as cv-en.pdf.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>Build approach:</b> tests with Node’s built-in runner (no test framework); content integrity tests guard private-repo links and forbidden strings; a <code>&lt;noscript&gt;</code> override keeps animated text readable without JS; commits only local on feat/cinematic-portfolio.</td><td>Claude</td></tr>
+<tr><td>2026-11-11</td><td><b>v2: the portfolio is a comic book</b> (issue #01, "the origin story of a full-stack developer"), replacing the film. One constant newsprint background; scenes change inside panels only. Four process inks; Archivo, JetBrains Mono and Bangers. Scroll-linked motion stepped "on twos". An original SVG Ruben character (no official art). The game layer is Return by Death (save points, skull/Konami rewind); the web-shooter is an opt-in cursor toy. Bot bubbles are labelled Bot #1/#2.</td><td>Ruben asked for a full redesign; Claude chose the concept</td></tr>
+<tr><td>2026-11-11</td><td><b>Ending:</b> the last moment is a Brand New Day nod. Ruben at home at night working with his AI, a 3-line chat in original lines, then contact.</td><td>Ruben</td></tr>
+<tr><td>2026-11-11</td><td><b>v3: minimal replaces the comic look.</b> Paper/ink/red; the fandom lives in small details (code kickers, game labels, anime episode numbers, Spider-Man web thread), not in a comic skin. Scroll motion is two-way (fades/rises in, rests, drifts out) plus parallax layers. With reduced motion every motion element gets explicit resting values, never <code>style={undefined}</code>. Full nav from 1024px. Web thread only at xl+ and behind content.</td><td>Ruben (look, motion) · Claude (details)</td></tr>
+<tr><td>2026-11-12</td><td><b>Unwritten copy is hidden, not shown as TBD.</b> Sections with no text render nothing; the missing copy is tracked in Next steps.</td><td>Ruben (feedback) / Claude</td></tr>
+<tr><td>2026-11-12</td><td><b>One reading line:</b> text on the left, pictures on the right (desktop). The drone's dialogue always lands in one fixed spot (top on phones, bottom-right on desktop) and hides after 8 s.</td><td>Ruben (feedback) / Claude</td></tr>
+<tr><td>2026-11-12</td><td><b>Real photos over drawings</b> where Ruben provided them; the drawn avatar stays as a small sticker.</td><td>Ruben</td></tr>
+<tr><td>2026-11-12</td><td><b>CI/CD wording is generic</b> (provider unknown). Playwright marked "used" (Budget Builder + GeekHatch).</td><td>Ruben / Claude</td></tr>
+<tr><td>2026-11-12</td><td><b>Re:Zero bot avatar</b> (<code>emilia-tan-bot.png</code>) is the real avatar of Ruben's bot, shown small beside its line. Roles confirmed by Ruben (2026-11-12): Bot #1 Estela = moderation, Bot #2 Emilia-Tan = community.</td><td>Claude</td></tr>
+<tr><td>2026-11-12</td><td>Static image imports live in <code>content/images.ts</code>, not <code>projects.ts</code> (node tests can't import images).</td><td>Claude</td></tr>
+<tr><td>2026-11-12</td><td><b>No drawn Ruben.</b> Real photos only; the face crop is the navbar mark and the favicon.</td><td>Ruben</td></tr>
+<tr><td>2026-11-12</td><td><b>SEO origin = Vercel's production URL:</b> <code>SITE_URL</code> reads <code>VERCEL_PROJECT_PRODUCTION_URL</code>, so canonical, sitemap and robots point at production on any build, custom domain included.</td><td>Claude</td></tr>
+<tr><td>2026-11-12</td><td><b>Hero availability chip removed.</b></td><td>Ruben</td></tr>
+</tbody></table></section>
+</main></body></html>

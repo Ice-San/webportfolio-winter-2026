@@ -1,0 +1,77 @@
+<title>Web Portfolio Second Brain</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<main>
+  <header class="slate">
+    <span class="label">Production slate · Ruben Costa</span>
+    <h1>Web Portfolio — Cinematic Redesign</h1>
+    <div class="meta">
+      <span>Notion: <a href="https://app.notion.com/p/41568cb3289b816d815cfc53d80eae00">project page</a></span>
+      <span>Updated: <b>2026-11-12</b></span>
+      <span>Local: <b>C:\Users\ruben\Desktop\webportfolio</b></span>
+      <span>Old live site: <a href="https://rubencosta-portfolio.vercel.app">rubencosta-portfolio.vercel.app</a></span>
+    </div>
+    <div class="meta"><span class="chip ok">✅ Notion sync: In sync</span><span class="chip acc">v3 round two built · awaiting Ruben's review</span></div>
+  </header>
+
+  <section>
+    <h2>Overview</h2>
+    <p>A bilingual (EN/PT) portfolio for Ruben Costa, a full-stack developer looking for a first role, told as a minimal anime-style series (v3): hero → episodes 01–03 → quest log (projects) → skill tree → side quests → episode 04 "Brand new day" night scene → contact. v1 (a film) and v2 (a comic book) were replaced at Ruben's request; v3 keeps one quiet paper look and shows his love for games, code, Spider-Man and anime/manga in small details, with parallax and two-way scroll animations. It follows <code>portfolio-redesign-playbook.md</code>, with cinematic native-scroll motion (framer-motion) and nods to Spider-Man, Subaru Natsuki (Re:Zero), Fight Club and The Social Network.</p>
+  </section>
+
+  <section>
+    <h2>The story spine <span class="tag">from the spec</span></h2>
+    <ol class="reel">
+      <li><span class="when">Age 12–15</span>Minecraft servers with friends, none shipped. <i>Starting from zero.</i></li>
+      <li><span class="when">≈2022</span>Animes Cold Discord server → two bots (incl. Emilia-Tan) → informative site.</li>
+      <li><span class="when">2024</span>PathPals, the PAP and first full-stack app.</li>
+      <li><span class="when">2025</span>Manager: React + Express + JWT + PostgreSQL.</li>
+      <li><span class="when">2026 · in progress</span>Budget Builder: quotes as PDFs for Portuguese contractors.</li>
+      <li><span class="when">2026 · beta</span>GeekHatch: the server grew up.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <ul class="checks">
+      <li class="done">Brainstorm with Ruben (2026-11-11)</li>
+      <li class="done">Design spec written: <code>docs/superpowers/specs/2026-11-11-portfolio-design.md</code></li>
+      <li class="done">Spec approved by Ruben (2026-11-11)</li>
+      <li class="done">Implementation plan: <code>docs/superpowers/plans/2026-11-11-cinematic-portfolio.md</code> (9 tasks)</li>
+      <li class="done">Build (i18n routing, story, projects reel, case studies, skills, credits): Tasks 1–9 done and self-reviewed (2026-11-11), uncommitted on master per Ruben</li>
+      <li class="done">v2 comic-book redesign (constant newsprint background, scroll-built panels, original SVG Ruben character, easter eggs) built and verified (2026-11-11); spec: <code>docs/superpowers/specs/2026-11-11-portfolio-redesign.md</code></li>
+      <li class="done">v3 minimal redesign (parallax, scroll in/out motion, fandom details) built and verified (2026-11-11); spec: <code>docs/superpowers/specs/2026-11-11-portfolio-v3-minimal.md</code></li>
+      <li>Ruben reviews the site locally and commits</li>
+      <li>Ruben writes the missing copy (now hidden from visitors): case-study sections, Ch03 course name + hard problem, what I want to learn next</li>
+      <li class="done">v3 round two: real photos, Byte the drone, auto-hide navbar, text-left layout, project pages fixed, monorepo/Docker/Playwright/CI-CD copy (2026-11-12)</li><li class="done">Real images replace placeholders (2026-11-12)</li>
+      <li>Deploy (ask before touching Ice-San/webportfolio or the live Vercel site)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Current focus</h2>
+    <p>v3 round two done and verified (2026-11-12): real photos, Byte the drone, auto-hide navbar, one reading line (text left, pictures right), project pages fixed. Waiting on Ruben's review; nothing is committed. Motion needs Windows "Animation effects" on (otherwise the site honours reduced motion). 3 <a href="open-decisions.html">open decisions</a> remain.</p>
+  </section>
+
+  <section>
+    <h2>Next steps <span class="tag">top</span></h2>
+    <ol><li>Ruben runs <code>pnpm dev</code>, reviews http://localhost:3000, then commits.</li><li>Review the copy Claude wrote: Japanese strings (第一話…最終話, ルーベン・コスタ, つづく), the fake git hashes, AI chat lines, "Rule #1", the console message, the footer.</li><li>Optionally delete the unused files: <code>components/comic/Sfx.tsx</code>, <code>components/eggs/CursorHalftone.tsx</code>, <code>components/comic/NightScene.tsx</code>, <code>components/comic/Ruben.tsx</code>, <code>components/Tbd.tsx</code> and <code>onTwos</code> in <code>components/motion/frames.ts</code>.</li><li>Write the missing copy (hidden until written); name the CI/CD provider if wanted; check the CV (it shows a personal phone and the old site URL).</li><li>Ruben answers the 3 remaining open decisions; then deploy (ask first). After deploy: enable Web Analytics in Vercel and submit <code>/sitemap.xml</code> in Google Search Console.</li></ol>
+  </section>
+
+  <section>
+    <h2>Latest progress</h2>
+    <ol class="reel"><li><span class="when">2026-11-12</span>SEO + analytics. Hero chip "Open to my first developer role" removed; Vercel Analytics added; every page has a meta description, keywords, canonical, hreflang en/pt/x-default, Open Graph and Twitter card; JSON-LD (Person, WebSite, projects); robots.txt, sitemap.xml and llms.txt built from the content. Lighthouse on the production build: SEO 100.</li><li><span class="when">2026-11-12</span>Round three. Bots named on their lines with real avatars (Estela #1 moderation, Emilia-Tan #2 community); live demos for Budget Builder (budgetb-gamma.vercel.app) and GeekHatch (geekhatch.com); Ruben's face in the navbar and as the favicon; drawn Ruben removed (hero and EP03). Verified: tests 11/11, tsc, lint, audit clean.</li><li><span class="when">2026-11-12</span>v3 round two. Real photos (hero, shelf, case studies, final scene with a floating AI bot); Byte the spider-drone flies the page and says one line per section in a fixed RPG dialogue box; the navbar folds away on scroll and returns on scroll up, hover or focus; text left / pictures right; project pages uncropped with no TBD boxes; Budget Builder + GeekHatch copy says Turborepo monorepo, Docker, Playwright and CI/CD. Verified: tests 11/11, lint, tsc, build, 63-run matrix, motion checks.</li><li><span class="when">2026-11-11</span>v3 minimal redesign built and verified. One paper ground, ink + red; parallax hero and episode numerals; blocks fade in and drift out on scroll; word-by-word statement. Fandom in the details: code kickers, git-log timeline, quest log / skill tree, 第一話…最終話, web thread and swinging spider. Fixed invisible content under reduced motion and PT nav overflow at 768.</li><li><span class="when">2026-11-11</span>v2 comic-book redesign built and verified. One newsprint background, panels that fly in on scroll (on twos), the cover opening on its spine, a web swing between pages, a sideways project shelf, a night scene with an AI companion. Easter eggs: Return by Death save points + Konami rewind, web-shooter toggle, halftone cursor, console message.</li></ol>
+  </section>
+
+  <section>
+    <h2>Pages</h2>
+    <ul class="pages">
+      <li><a href="features.html">Features<span>Every section of v3 (minimal), easter eggs and routes</span></a></li>
+      <li><a href="tech-stack.html">Tech stack<span>Next 16, framer-motion, i18n approach</span></a></li>
+      <li><a href="key-decisions-2026-11.html">Key decisions — 2026-11<span>10 decisions so far</span></a></li>
+      <li><a href="progress-log-2026-11.html">Progress log — 2026-11<span>Dated entries</span></a></li>
+      <li><a href="open-decisions.html">Open decisions<span>3 of 6 still open</span></a></li>
+      <li><a href="next-steps-details.html">Next steps — details<span>Build order and verification</span></a></li>
+    </ul>
+  </section>
+</main>

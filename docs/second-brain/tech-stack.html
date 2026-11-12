@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech stack · Web Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header class="slate"><nav class="crumbs"><a href="index.html">← Web Portfolio Second Brain</a></nav><h1>Tech stack</h1></header>
+<section><ul>
+<li>Next.js 16.4 App Router (already scaffolded), React 19.3, TypeScript, Tailwind CSS 4</li>
+<li>framer-motion (scroll scenes: <code>useScroll</code>/<code>useTransform</code>, sticky pinning; native scroll only) + lucide-react icons</li>
+<li>i18n per the Next 16 guide: <code>proxy.ts</code> locale redirect, <code>app/[lang]</code>, JSON dictionaries <code>en.json</code>/<code>pt.json</code>; no i18n library</li>
+<li>Content: dictionaries + <code>content/projects.ts</code>; no CMS or DB</li>
+<li>pnpm 12</li><li>@vercel/analytics 2.0.1 (<code>&lt;Analytics /&gt;</code> in the root layout)</li><li>SEO files: <code>app/robots.ts</code>, <code>app/sitemap.ts</code>, <code>app/llms.txt/route.ts</code>, <code>lib/site.ts</code>, <code>components/JsonLd.tsx</code></li></ul></section>
+</main></body></html>
