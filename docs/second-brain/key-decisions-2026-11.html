@@ -28,5 +28,6 @@
 <tr><td>2026-11-12</td><td><b>No drawn Ruben.</b> Real photos only; the face crop is the navbar mark and the favicon.</td><td>Ruben</td></tr>
 <tr><td>2026-11-12</td><td><b>SEO origin = Vercel's production URL:</b> <code>SITE_URL</code> reads <code>VERCEL_PROJECT_PRODUCTION_URL</code>, so canonical, sitemap and robots point at production on any build, custom domain included.</td><td>Claude</td></tr>
 <tr><td>2026-11-12</td><td><b>Hero availability chip removed.</b></td><td>Ruben</td></tr>
+<tr><td>2026-11-12</td><td><b>No file over 100 lines</b>, enforced by ESLint <code>max-lines</code>. A file that grows too big keeps its path and exports and moves its parts into a same-name lowercase folder next to it (<code>projects.ts</code> + <code>projects/</code>, <code>Drone.tsx</code> + <code>drone/</code>), so no importer changes. Site copy is split per page area into <code>dictionaries/&lt;lang&gt;/*.json</code>. Unused components are deleted, not kept for later (recoverable from commit <code>360c42d</code>).</td><td>Ruben / Claude</td></tr>
 </tbody></table></section>
 </main></body></html>
