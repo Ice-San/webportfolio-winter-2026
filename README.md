@@ -1,25 +1,27 @@
 # Ruben Costa · Portfolio (v3)
 
 A bilingual (English / Portuguese) portfolio told as a short anime-style series. Next.js 16 (App Router),
-React 19, Tailwind CSS 4, framer-motion. Deployed on Vercel.
+React 19, Tailwind CSS 4, framer-motion. Built for Vercel (not deployed yet).
 
 ## Commands
 
 ```bash
 pnpm dev     # local site at http://localhost:3000 (redirects to /en or /pt)
-pnpm test    # content, dictionary and i18n tests (node --test)
+pnpm test    # content, dictionary, i18n and line-limit tests (node --test)
 pnpm lint    # ESLint, including the 100-line rule below
 pnpm build   # production build
 ```
 
 ## House rules
 
-- **No file over 100 lines.** `pnpm lint` fails if a code file grows past it.
+- **No file over 100 lines.** `pnpm lint` checks TS/TSX/JS, and `pnpm test` checks the CSS in `app/` and the JSON
+  in `dictionaries/`.
 - **When a file gets too big, split it into a same-name folder next to it.** The original file keeps its path and
   exports, so nothing that imports it changes. Examples: `content/projects.ts` + `content/projects/`,
   `components/eggs/Drone.tsx` + `components/eggs/drone/`.
-- All visible text lives in `dictionaries/` or `content/`, never hard-coded in components. Every string has an
-  `en` and a `pt` version (the tests check this).
+- Translated copy lives in `dictionaries/` (page text) and `content/` (projects, skills), each with an `en` and a
+  `pt` version (the tests check this). A few decorative strings stay inline in their component: the Japanese
+  titles (第一話…最終話, ルーベン・コスタ, つづく), "Byte", "EP.00 / 04", and the name/handles in the footer and nav.
 
 ## Where to change what
 
