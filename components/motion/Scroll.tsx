@@ -1,7 +1,7 @@
 'use client'
 import { useRef, type RefObject } from 'react'
 import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion'
-import { useMedia } from './frames'
+import { useMedia } from './useMedia'
 import { REST, useStill } from './useStill'
 
 // In and out: a block rises and fades in as it enters, rests while it's read, then drifts up and fades as it leaves.

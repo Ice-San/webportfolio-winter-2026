@@ -1,4 +1,4 @@
-import { Reveal } from './motion/Reveal'
+import { Reveal } from '../motion/Reveal'
 
 // One section of the case study. A null body is copy Ruben hasn't written yet: visitors don't see the section at all
 // (docs/README.md lists what's missing).
