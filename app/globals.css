@@ -1,26 +1,239 @@
 @import "tailwindcss";
 
+/* v3: minimal. One quiet ground from top to bottom; the fandom lives in the details:
+   a web thread down the margin, anime episode numbers, a game HUD, code as decoration. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --paper: #F6F5F1;
+  --paper-2: #ECEAE4;
+  --ink: #111110;
+  --muted: #66645E;
+  --line: #DAD7CF;
+  --red: #E0241B;
+  /* #E0241B is under 4.5:1 on paper for small text, so text uses a darker step */
+  --red-text: #BA1C14;
+  --blue: #2350D8;
+  /* Night-scene colours, only ever inside its own frame. */
+  --yellow: #F2C230;
+  --night: #0F1322;
+  --night-2: #1A2034;
+  --night-fg: #ECEAE3;
+  --glow: #8DD2FF;
+
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --accent: var(--red);
+  --accent-text: var(--red-text);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-red: var(--red);
+  --color-red-text: var(--red-text);
+  --color-blue: var(--blue);
+  --color-yellow: var(--yellow);
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-fg: var(--night-fg);
+  --color-glow: var(--glow);
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Consolas, monospace;
+  /* Decorative Japanese only (episode numbers, the katakana name): system fonts, no webfont download. */
+  --font-jp: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--red);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@layer components {
+  .slate {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  /* "// EP.01": code-comment kickers in the accent. */
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red-text);
+  }
+  .kicker::before {
+    content: "// ";
+    /* empty alt text: screen readers skip the decoration */
+    content: "// " / "";
+  }
+  .title {
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .prose-story {
+    max-width: 62ch;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+  }
+  /* A side note: one red rule, no box. */
+  .note {
+    border-left: 2px solid var(--red);
+    padding: 0.125rem 0 0.125rem 0.875rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* A manga panel, minimal: one hairline, no shadow. */
+  .panel {
+    position: relative;
+    border: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .panel-night {
+    border-color: var(--night);
+    background: var(--night);
+    color: var(--night-fg);
+  }
+
+  /* Screentone: the fine dot pattern of manga shading. --dot sets the ink. */
+  .tone {
+    background-image: radial-gradient(var(--dot, rgb(17 17 16 / 0.13)) 0.9px, transparent 1.1px);
+    background-size: 6px 6px;
+  }
+  /* Outlined numerals behind episode headers. */
+  .outline-num {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--line);
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    line-height: 0.8;
+  }
+  .jp {
+    font-family: var(--font-jp);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.35em;
+  }
+
+  .chat {
+    border: 1px solid var(--line);
+    border-radius: 1.1rem 1.1rem 1.1rem 0.25rem;
+    background: var(--paper);
+    padding: 0.75rem 1rem;
+    line-height: 1.45;
+  }
+  .chat-me {
+    border-color: var(--ink);
+    border-radius: 1.1rem 1.1rem 0.25rem 1.1rem;
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--ink);
+    border-radius: 999px;
+    padding: 0 1.25rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .btn:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-solid {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-solid:hover {
+    border-color: var(--red);
+    background: var(--red);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.125rem 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+  }
+}
+
+/* The AI companion blinks and the city hums. */
+@keyframes blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+@keyframes type {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
+@keyframes rewind {
+  from { background-position: 0 0; }
+  to { background-position: 0 -240px; }
+}
+@keyframes glitch {
+  0% { clip-path: inset(10% 0 70% 0); transform: translate(-6px, 0); }
+  25% { clip-path: inset(60% 0 10% 0); transform: translate(6px, 0); }
+  50% { clip-path: inset(30% 0 40% 0); transform: translate(-3px, 0); }
+  75% { clip-path: inset(80% 0 5% 0); transform: translate(4px, 0); }
+  100% { clip-path: inset(0 0 0 0); transform: none; }
+}
+@keyframes cue {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+  .btn {
+    transition: none;
+  }
+}
+
+/* The companions bob in place. */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }

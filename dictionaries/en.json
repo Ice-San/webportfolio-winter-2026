@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Ruben Costa · Full-stack developer",
+    "description": "Ruben Costa is a full-stack developer from Portugal. From a Discord server to GeekHatch: the story, the projects and the skills behind them.",
+    "projectSuffix": "Ruben Costa",
+    "keywords": [
+      "Ruben Costa",
+      "full-stack developer",
+      "junior developer",
+      "web developer Portugal",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Playwright",
+      "CI/CD",
+      "Turborepo",
+      "Tailwind CSS",
+      "developer portfolio"
+    ]
+  },
+  "common": {
+    "skip": "Skip to content",
+    "tbd": "TBD — Ruben to write",
+    "image": "Image",
+    "page": "Page"
+  },
+  "nav": {
+    "home": "Ruben Costa, back to the top",
+    "story": "Story",
+    "projects": "Projects",
+    "skills": "Skills",
+    "now": "Now",
+    "contact": "Contact",
+    "cv": "CV",
+    "menu": "Menu",
+    "switchTo": "PT",
+    "switchLabel": "Mudar para português",
+    "web": "Web-shooter: click anywhere on the page to shoot a web"
+  },
+  "hud": {
+    "attempt": "Attempt",
+    "die": "Return by Death: rewind to the last save point",
+    "saved": "Checkpoint saved",
+    "died": "You died",
+    "returning": "Returning to the last save point…",
+    "konami": "Psst: ↑ ↑ ↓ ↓ ← → ← → B A",
+    "console": "Hey, fellow dev. This page is Next.js 16, framer-motion and a lot of retries. Try the Konami code. And if you're hiring: rubencosta.dev.2004@gmail.com"
+  },
+  "cover": {
+    "label": "Introduction",
+    "kicker": "Portfolio · 2026",
+    "role": "Full-stack developer",
+    "name": "Ruben Costa",
+    "headline": "Curiosity brought me here. Building things made me a developer.",
+    "subline": "I build web apps end to end, from the database to the interface.",
+    "ctaStory": "Start the story",
+    "ctaWork": "See the projects",
+    "ctaCv": "Download CV",
+    "scroll": "Scroll",
+    "photoAlt": "Ruben smiling in a white T-shirt in front of a colourful street mural"
+  },
+  "ch01": {
+    "slate": "Age 12–15",
+    "title": "Re: Starting from zero",
+    "nod": "Every retry starts from zero. You keep what you learned.",
+    "body": [
+      "I was somewhere between 12 and 15 when Minecraft stopped being just a game. I wanted to know how the worlds, the servers and the rules behind them actually worked.",
+      "With friends, I tried to set up our own Minecraft servers. None of them ever shipped.",
+      "They still counted. It was the first time I tried to build something for other people to use."
+    ],
+    "image": "A Minecraft build from back then: a round hub in a lake with four paths leading out to the forest",
+    "friends": "Building with friends",
+    "attempt": "Attempt #01"
+  },
+  "save": {
+    "label": "Checkpoint",
+    "sfx": "Saved"
+  },
+  "swing": {
+    "sfx": "Thwip!",
+    "toCh02": "Next episode: the server",
+    "toWork": "Next: the quest log"
+  },
+  "ch02": {
+    "slate": "≈2022",
+    "title": "The server",
+    "nod": "You don't build a community alone. Sometimes you build the bots too.",
+    "beats": [
+      "One Discord server",
+      "Two bots join",
+      "A website for the community"
+    ],
+    "channels": [
+      "general",
+      "anime",
+      "manga",
+      "bots"
+    ],
+    "serverName": "Animes Cold",
+    "serverAlt": "The AniColds Discord server card: 9,343 members, 297 online, around since October 2020",
+    "botTag": "Bot",
+    "botName": "Emilia-Tan",
+    "botMod": "Moderation: keeping the server safe and organised.",
+    "botCommunity": "Community: giving members more reasons to talk and come back.",
+    "body": [
+      "It started with Animes Cold, a simple Discord server for anime and manga fans that grew into a community.",
+      "To help run it, I built two Discord bots: Estela, to improve moderation, and Emilia-Tan, named after the Re:Zero character, to bring more life to the community.",
+      "I also made small informative pages with plain HTML, CSS and JavaScript, including a website for the server.",
+      "That server is where everything I build today begins."
+    ],
+    "imageServer": "Screenshot of the Animes Cold Discord server: channel list and bot messages (crop out usernames)",
+    "imageSite": "The old Anime's Cold website: a header banner with tabs for home, premium, news, support and the Emilia-Tan bot",
+    "attemptTwo": "In 2024 I tried to go further with AniColds, a web app for the community. That was attempt number two.",
+    "attemptLabel": "Attempt #02"
+  },
+  "ch03": {
+    "slate": "Curso profissional → CTeSP",
+    "title": "Self-made",
+    "nod": "No mentor, no kit. Just a homemade suit and a lot of trial and error.",
+    "steps": [
+      {
+        "when": "Self-taught",
+        "text": "I learned on my own alongside the curso profissional, a Portuguese vocational IT course: documentation, tutorials and a lot of trial and error."
+      },
+      {
+        "when": "PAP · 2024",
+        "text": "My final project for the course (the PAP) was PathPals: a school-transport app where students request a ride to school and the school confirms it."
+      },
+      {
+        "when": "First full-stack app",
+        "text": "A front end, a back end and a database working together. That was when I knew I could actually do this."
+      },
+      {
+        "when": "CTeSP · IPCB",
+        "text": "After that came a CTeSP at IPCB, a higher technical course, where I'm now finishing the last subject."
+      }
+    ],
+    "sketch": "Drawn, erased, redrawn. That's the suit.",
+    "courseLabel": "CTeSP course",
+    "courseTbd": "Exact CTeSP course name",
+    "problemTitle": "The problem that changed how I think",
+    "problemTbd": "One real technical problem I got stuck on, and how I solved it.",
+    "image": "PathPals, my PAP: the landing page with the hand-drawn logo over two students outside a school"
+  },
+  "work": {
+    "slate": "Quest log",
+    "title": "Four projects, in the order I built them",
+    "intro": "Each one has a full case study.",
+    "sideways": "Keep scrolling: the log moves sideways.",
+    "issue": "Quest",
+    "caseStudy": "Read the case study",
+    "demo": "Live demo",
+    "source": "Source",
+    "notPublic": "Demo and source not public",
+    "sourceNotPublic": "Source not public",
+    "payoff": "The server grew up."
+  },
+  "case": {
+    "back": "Back to the projects",
+    "type": "Type",
+    "status": "Status",
+    "role": "Role",
+    "roleValue": "Designed and built it myself",
+    "timeline": "Timeline",
+    "links": "Links",
+    "idea": "The idea",
+    "challenge": "The challenge",
+    "approach": "My approach",
+    "implementation": "Implementation",
+    "technology": "Technology",
+    "result": "The result",
+    "learned": "What I learned",
+    "gallery": "Gallery",
+    "next": "Next project",
+    "end": "Back to all projects"
+  },
+  "skills": {
+    "slate": "Skill tree",
+    "title": "Skills, with receipts",
+    "intro": "No percentages. Every skill names the project that proves it.",
+    "usedIn": "Proven in",
+    "set": "Branch",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Data",
+      "practices": "Engineering practices"
+    },
+    "labels": {
+      "used": "Used in projects",
+      "familiar": "Familiar",
+      "learning": "Learning"
+    }
+  },
+  "offscreen": {
+    "slate": "Side quests",
+    "title": "You are not your code.",
+    "body": [
+      "Outside of code I play video games, watch films and series, and follow anime. That last one is where Animes Cold and GeekHatch come from.",
+      "Some of what shaped me, and this site: Spider-Man, Subaru Natsuki from Re:Zero, Fight Club and The Social Network."
+    ],
+    "image": "Me at a café at night, smiling, with an iced drink and my phone",
+    "ruleFront": "Rule #1",
+    "ruleBack": "Close the laptop sometimes. The best ideas show up away from the screen.",
+    "ruleLabel": "Flip the rule sticker"
+  },
+  "ch04": {
+    "slate": "Now",
+    "title": "Brand new day",
+    "nod": "A fresh start, with everything I've learned so far.",
+    "body": [
+      "I'm finishing the last subject of my CTeSP and looking for my first role as a full-stack developer.",
+      "Right now I'm building Budget Builder and running the GeekHatch beta: Next.js, Express and PostgreSQL, from the schema to the interface."
+    ],
+    "learnTitle": "What I want to learn next",
+    "scene": "Night. Ruben at his desk at home, coding by the light of the lamp and the monitor.",
+    "aiName": "AI",
+    "meName": "Ruben",
+    "ai1": "Evening, Ruben. What are we building today?",
+    "me1": "Something new. It's a brand new day.",
+    "ai2": "Then let's make sure they can reach you.",
+    "end": "To be continued…"
+  },
+  "credits": {
+    "title": "Contact",
+    "lead": "Have a role or a project in mind? Get in touch.",
+    "writtenBy": "Designed and built by your friendly neighbourhood full-stack developer,",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "cv": "CV",
+    "cvLink": "Download the CV (PDF)",
+    "copy": "Copy email",
+    "copied": "Copied",
+    "footer": "No Minecraft servers were harmed in the making of this site."
+  },
+  "notFound": {
+    "slate": "You died",
+    "title": "Page not found",
+    "line": "Returning to the last save point…",
+    "home": "Return to the last save point",
+    "rewind": "Rewind"
+  },
+  "drone": {
+    "top": "Hi, I'm Byte, Ruben's drone. I'll fly the whole page with you. Scroll down!",
+    "ch01": "Episode 1: a Minecraft server. This is where the curiosity started, one block at a time.",
+    "ch02": "A Discord server for anime fans, two bots and a website. Attempt number two.",
+    "ch03": "No shortcuts here: a course, a lot of commits and plenty of retries.",
+    "work": "Quest log unlocked. Every card opens a full case study.",
+    "skills": "Skill tree: each skill links to the project that proves it.",
+    "offscreen": "Side quests: games, anime and films. Flip the red card for Rule #1.",
+    "ch04": "Lamp on, code on the screen, me floating next to him. A brand new day.",
+    "credits": "End of the season. Want to start over? Tap the skull and Return by Death takes you back to zero. Nothing you learned is lost."
+  }
+}
