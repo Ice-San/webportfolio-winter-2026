@@ -22,6 +22,8 @@ pnpm build   # production build
 - Translated copy lives in `dictionaries/` (page text) and `content/` (projects, skills), each with an `en` and a
   `pt` version (the tests check this). A few decorative strings stay inline in their component:
   "Byte", "EP.00 / 04", and the name/handles in the footer and nav.
+- **One look everywhere.** Byte (`components/eggs/drone/ByteSvg.tsx`) is the only robot, `WebGlyph`
+  (`components/comic/WebGlyph.tsx`) is the only Spider-Man symbol (no spiders), and there is no Japanese text.
 
 ## Where to change what
 
@@ -37,6 +39,9 @@ pnpm build   # production build
 | Colours and fonts | `app/styles/tokens.css` |
 | Shared CSS classes (`kicker`, `title`, `btn`, `chip`…) | `app/styles/typography.css`, `app/styles/controls.css` |
 | Animations (keyframes, reduced motion) | `app/styles/motion.css` |
+| Page width and section spacing | `app/styles/layout.css`: `.column` (width + side padding), `.section-y` (added by `Scene` unless `flush`) |
+| Favicon and the nav mark | `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`, `components/Monogram.tsx` |
+| Where Byte flies or docks | `components/eggs/drone/useLane.ts` |
 | SEO: titles, share image, sitemap, robots, llms.txt | `app/[lang]/layout.tsx`, `opengraph-image.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/llms.txt/` |
 | Language detection / redirect | `proxy.ts` + `lib/i18n.ts` |
 
@@ -44,7 +49,7 @@ pnpm build   # production build
 
 | File | Keys |
 |---|---|
-| `site.json` | `meta` (SEO), `common`, `nav`, `hud`, `notFound`, `drone` |
+| `site.json` | `meta` (SEO), `common`, `nav`, `hud`, `notFound`, `drone`, `web` (Byte's summary when a web hits a section) |
 | `opening.json` | `cover`, `ch01`, `save`, `swing` |
 | `chapters.json` | `ch02`, `ch03` |
 | `work.json` | `work`, `case`, `skills` |
@@ -75,7 +80,7 @@ app/                 routes (Next.js App Router), globals.css + styles/
 components/
   sections/          one file per home-page section (table above)
   case-study/        header, sections, tech list, gallery, next link of a case study
-  comic/             manga building blocks: Episode, Panel, Title, PhotoScene, BlockBuild
+  comic/             manga building blocks: Episode, Panel, Title, PhotoScene, BlockBuild, WebGlyph
   motion/            scroll animation helpers: InOut, Parallax, Words, Reveal, useStill, useMedia
   eggs/              easter eggs: Byte the drone, Return by Death (Konami code), save points, web shooter
   *.tsx              shared bits: Nav, Scene, Placeholder, Screenshot, Stamp, ProjectLinks, CopyEmail…
